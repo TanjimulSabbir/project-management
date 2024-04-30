@@ -1,8 +1,16 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
+import { Inter, Roboto_Mono } from 'next/font/google'
 
-const inter = Inter({ subsets: ["latin"] });
+export const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+export const roboto_mono = Roboto_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata = {
   title: "Project Management",
@@ -12,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={roboto_mono.className}>
         <AntdRegistry>{children}</AntdRegistry>
       </body>
     </html>
