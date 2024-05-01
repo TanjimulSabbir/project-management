@@ -11,8 +11,9 @@ import Modal from "@/app/utils/Modal";
 import EditInfo from "./EditInfo";
 
 export default function Tasks() {
-    let { tasks, setTasks, setCurrentPage, currentPage } = useProjectsStore();
+    let { tasks, setTasks, setCurrentPage, currentPage, removeData } = useProjectsStore();
     const [openModal, setOpenModal] = useState(false);
+    const [showData, setShowData] = useState([])
 
     const handleModal = () => {
         setOpenModal(!openModal);
@@ -20,21 +21,20 @@ export default function Tasks() {
 
     currentPage = currentPage.tasksCurrentPage;
     let pageItems = 3;
-    const allTasks = ProjectsData.projects.flatMap(project => project.tasks);
+
 
     useEffect(() => {
-        setTasks(allTasks.slice((currentPage - 1) * pageItems, pageItems * currentPage));
-        console.log((currentPage - 1) * pageItems, pageItems * currentPage)
-    }, [currentPage]);
+        setShowData(tasks.slice((currentPage - 1) * pageItems, pageItems * currentPage));
+    }, [currentPage,tasks]);
 
     return (
         <div className="space-y-3 py-10">
-            {tasks.map(task => {
+            {showData.map(task => {
                 const { id, title, description, status, dueDate, } = task;
                 return (
                     <div key={id} className="flex items-center p-4 border border-gray-200 rounded-md">
                         <div className="flex-1 min-w-[30%]">
-                            <p>{title}</p>
+                            <p>{id}.{title}</p>
                             <ProjectTitle name="Development" />
                         </div>
                         <div className="flex-1">
@@ -53,7 +53,7 @@ export default function Tasks() {
                                 <ProjectTitle name="Due Date" />
                             </div>
                         </div>
-                        <Options handleModal={handleModal} data={task} />
+                        <Options handleModal={handleModal} data={task} type="task" />
                         <Modal openModal={openModal} handleModal={handleModal} data={task} />
                     </div>
                 )
@@ -62,7 +62,7 @@ export default function Tasks() {
             {/* <button onClick={() => handleModal()}>Open</button> */}
 
             <ShowPage
-                length={allTasks.length}
+                length={tasks.length}
                 pageItems={pageItems}
                 currentPage={currentPage.projectCurrentPage}
                 setCurrentPage={setCurrentPage}

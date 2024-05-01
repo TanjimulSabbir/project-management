@@ -16,9 +16,9 @@ const OptionButton = ({ label, onClick }) => (
     </div>
 );
 
-export default function Options({ handleModal, data }) {
+export default function Options({ handleModal, data, type }) {
     const router = useRouter();
-    const { setIndividualPost, removeProject } = useProjectsStore();
+    const { setIndividualPost, removeData, setRemoveId } = useProjectsStore();
 
     console.log(data, "from option")
 
@@ -49,7 +49,13 @@ export default function Options({ handleModal, data }) {
     };
 
     const handleDelete = (id) => {
-        removeProject(id)
+        if (type === "project") {
+            removeData({ id, deleteType: "projects" })
+        } else {
+            removeData({ id, deleteType: "tasks" })
+        }
+
+        setRemoveId({ id, type })
     };
 
     return (

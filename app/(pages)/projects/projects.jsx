@@ -11,8 +11,10 @@ import Modal from "@/app/utils/Modal";
 import { useRouter } from "next/navigation";
 
 export default function Projects() {
-    let { projects, setProjects, setCurrentPage, currentPage, } = useProjectsStore();
+    let { projects, setProjects, setCurrentPage, currentPage, removeId } = useProjectsStore();
     const [openModal, setOpenModal] = useState(false);
+    const [showData, setShowData] = useState([])
+  
 
     const router = useRouter();
     const handleModal = () => {
@@ -22,16 +24,16 @@ export default function Projects() {
     currentPage = currentPage.projectCurrentPage
     let pageItems = 3;
 
-    console.log(currentPage, "from projects")
-    // const allTasks = ProjectsData.projects.flatMap(project => project.tasks);
-    // console.log(allTasks,"allTasks")
+    console.log(projects, "from projects")
+
     useEffect(() => {
-        setProjects(ProjectsData.projects.slice((currentPage - 1) * pageItems, pageItems * currentPage));
-    }, [currentPage]);
+        setShowData(projects.slice((currentPage - 1) * pageItems, pageItems * currentPage));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [currentPage, projects]);
 
     return (
         <div className="space-y-3 py-10">
-            {projects.map(project => {
+            {showData.map(project => {
                 const { id, name, description, status, dueDate, tasks, estimated_total_budget } = project;
                 return (
                     <div key={id} className="flex items-center p-4 border border-gray-200 rounded-md">
@@ -62,13 +64,13 @@ export default function Projects() {
                             </p>
                             <ProjectTitle name="status" />
                         </div>
-                        <Options handleModal={handleModal} data={project} router={router} />
+                        <Options handleModal={handleModal} data={project} router={router} type="project" />
                         <Modal openModal={openModal} handleModal={handleModal} data={project} />
                     </div>
                 )
             })}
             <ShowPage
-                length={ProjectsData.projects.length}
+                length={projects.length}
                 pageItems={pageItems}
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
