@@ -3,20 +3,16 @@ import { Pagination } from 'antd';
 import useProjectsStore from '../store';
 import toast from 'react-hot-toast';
 
-const ShowPage = ({ length, pageItems = 5 }) => {
-    const { projects, currentPage, setCurrentPage } = useProjectsStore();
-
+const ShowPage = ({ length, pageItems,currentPage,setCurrentPage }) => {
 
     const handlePageChange = (pageNumber) => {
-        toast.success(pageNumber)
         setCurrentPage(pageNumber);
-        console.log(projects)
     };
 
     return (
         <div className='flex items-center justify-center py-5'>
             <Pagination
-                current={curPage}
+                current={currentPage}
                 defaultCurrent={1}
                 pageSize={pageItems}
                 total={length}

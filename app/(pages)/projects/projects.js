@@ -8,14 +8,15 @@ import ProjectTitle from "@/app/utils/projectTitle";
 import ShowPage from "@/app/utils/Pagination";
 
 export default function Projects() {
-    const { projects, setProjects } = useProjectsStore();
-    const currentPage = useProjectsStore((state) => state.currentPage);
+    const { projects, setProjects, setCurrentPage, currentPage } = useProjectsStore();
+
     let pageItems = 3;
-    console.log(e, "projectDataSlice")
+
+    console.log(currentPage, "from projects")
 
     useEffect(() => {
-        setProjects(ProjectsData.projects.slice(currentPage - 1, pageItems * currentPage));
-        console.log(currentPage - 1, pageItems * currentPage, "projectDataSlice")
+        setProjects(ProjectsData.projects.slice((currentPage - 1) * pageItems, pageItems * currentPage));
+        console.log((currentPage - 1) * pageItems, pageItems * currentPage)
     }, [currentPage]);
 
     return (
@@ -28,28 +29,33 @@ export default function Projects() {
                             <p>{name}</p>
                             <ProjectTitle name="Development" />
                         </div>
-                        <div className="flex-1"> {/* Adjust the width as needed */}
+                        <div className="flex-1">
                             <p>
                                 <span>{tasks.filter(task => task.status === "Completed").length || 0}</span>/
                                 <span>{tasks.length}</span>
                             </p>
                             <ProjectTitle name="Tasks" />
                         </div>
-                        <div className="flex-1"> {/* Adjust the width as needed */}
+                        <div className="flex-1">
                             <p>${estimated_total_budget}</p>
                             <ProjectTitle name="Budgets" />
                         </div>
-                        <div className="flex-1"> {/* Adjust the width as needed */}
-                            <p>
+                        <div className="flex-1">
+                            <div>
                                 <p>{moment(dueDate).format('DD MMMM YYYY')}</p>
                                 <ProjectTitle name="Due Date" />
-                            </p>
+                            </div>
                         </div>
                         <Options />
                     </div>
                 )
             })}
-            <ShowPage length={ProjectsData.projects.length} pageItems={pageItems} />
+            <ShowPage
+                length={ProjectsData.projects.length}
+                pageItems={pageItems}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+            />
         </div>
     )
 }
