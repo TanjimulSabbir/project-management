@@ -11,11 +11,10 @@ import Modal from "@/app/utils/Modal";
 import { useRouter } from "next/navigation";
 
 export default function Projects() {
-    let { projects, setProjects, setCurrentPage, currentPage } = useProjectsStore();
+    let { projects, setProjects, setCurrentPage, currentPage, } = useProjectsStore();
     const [openModal, setOpenModal] = useState(false);
 
     const router = useRouter();
-
     const handleModal = () => {
         setOpenModal(!openModal);
     }
@@ -37,7 +36,7 @@ export default function Projects() {
                 return (
                     <div key={id} className="flex items-center p-4 border border-gray-200 rounded-md">
                         <div className="flex-1 min-w-[20%]">
-                            <p>{name}</p>
+                            <p>{id}.{name}</p>
                             <ProjectTitle name="Development" />
                         </div>
                         <div className="flex-1 text-center">

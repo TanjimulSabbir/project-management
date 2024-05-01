@@ -1,4 +1,5 @@
-"use client"
+import React from 'react';
+import { useRouter } from 'next/navigation';
 import useProjectsStore from "@/app/store";
 import ConfirmationModal from "@/app/utils/Confirmation";
 import toast from "react-hot-toast";
@@ -15,8 +16,12 @@ const OptionButton = ({ label, onClick }) => (
     </div>
 );
 
-export default function Options({ handleModal, data, router }) {
-    let { individualPost, setIndividualPost } = useProjectsStore();
+export default function Options({ handleModal, data }) {
+    const router = useRouter();
+    const { setIndividualPost, removeProject } = useProjectsStore();
+
+    console.log(data, "from option")
+
     const handleOption = (option) => {
         switch (option) {
             case "edit":
@@ -39,15 +44,12 @@ export default function Options({ handleModal, data, router }) {
     };
 
     const handleViewDetails = (data) => {
-        console.log(data)
         setIndividualPost({ data, type: "task" })
         router.push(`/projects/${data.id}`)
     };
 
-    const handleDelete = () => {
-        setIndividualPost(prevState => ({
-            ...prevState, project: {}
-        }));
+    const handleDelete = (id) => {
+        removeProject(id)
     };
 
     return (
@@ -55,9 +57,8 @@ export default function Options({ handleModal, data, router }) {
             <div className="flex items-center space-x-4">
                 <OptionButton label="Edit" onClick={() => handleOption("edit")} />
                 <OptionButton label="View Details" onClick={() => handleOption("view_details")} />
-                <OptionButton label="Delete" onClick={() => handleOption("delete")} />
+                <ConfirmationModal id={data.id} handleDelete={handleDelete} />
             </div>
-            <ConfirmationModal message={"Do you want to delete this project?"} onConfirm={handleDelete} />
         </>
     );
 }
