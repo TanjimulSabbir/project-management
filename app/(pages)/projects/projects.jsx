@@ -14,7 +14,7 @@ export default function Projects() {
     let { projects, setProjects, setCurrentPage, currentPage, removeId } = useProjectsStore();
     const [openModal, setOpenModal] = useState(false);
     const [showData, setShowData] = useState([])
-  
+
 
     const router = useRouter();
     const handleModal = () => {
@@ -33,7 +33,7 @@ export default function Projects() {
 
     return (
         <div className="space-y-3 py-10">
-            {showData.map(project => {
+            {showData.length > 0 ? showData.map(project => {
                 const { id, name, description, status, dueDate, tasks, estimated_total_budget } = project;
                 return (
                     <div key={id} className="flex items-center p-4 border border-gray-200 rounded-md">
@@ -68,7 +68,7 @@ export default function Projects() {
                         <Modal openModal={openModal} handleModal={handleModal} data={project} />
                     </div>
                 )
-            })}
+            }) : "No Data Found!"}
             <ShowPage
                 length={projects.length}
                 pageItems={pageItems}
