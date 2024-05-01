@@ -6,7 +6,7 @@ export default function Modal({ data = "hellow", handleModal, openModal }) {
     return (
         <>
             {openModal && <div
-                className={`${openModal ? "grow" : "fade-out"} absolute min-h-full w-full inset-0 flex items-center justify-center bg-black bg-opacity-60 text-white`}
+                className={`${openModal ? "grow" : "fade-out"} absolute min-h-full w-full inset-0 bg-[#000000a3] text-white`}
             >
                 <EditInfo data={data} handleModal={handleModal} />
             </div>}

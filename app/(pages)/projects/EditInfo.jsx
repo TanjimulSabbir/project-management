@@ -6,7 +6,7 @@ import ProjectTitle from "@/app/utils/projectTitle";
 
 // Reusable input component
 const InputField = ({ label, type, defaultValue }) => (
-    <div className="flex-1">
+    <div className="w-full">
         <ProjectTitle name={label} />
         <input
             type={type}
@@ -26,31 +26,39 @@ const Button = ({ label, onClick }) => (
     </button>
 );
 
+const EditProjectHeader = () => (
+    <div className="pb-3 text-center">Edit Project</div>
+);
+
 export default function EditInfo({ data, handleModal }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission logic
         toast.success("Project information updated!");
-        handleModal()
+        handleModal();
     };
 
     const handleCancel = () => {
-        handleModal()
+        handleModal();
     };
 
     return (
-        <div className='p-4 border border-gray-200 rounded-md '>
-            <div key={data.id} className="space-y-7 mb-5">
-                <InputField label="Development" type="text" defaultValue={data.name} />
-                <InputField label="Budgets" type="number" defaultValue={data?.estimated_total_budget} />
-                <InputField label="Due Date" type="date" defaultValue={moment(data.dueDate).format('YYYY-MM-DD')} />
-                <InputField label="Status" type="text" defaultValue={data.status} />
-            </div>
+        <>
+        
+            <div className='p-10 bg-white rounded-xl shadow-2xl w-1/2 mx-auto mt-10'>
+            <EditProjectHeader />
+                <div key={data.id} className="space-y-7 mb-5">
+                    <InputField label="Development Name" type="text" defaultValue={data.name} />
+                    <InputField label="Budgets" type="number" defaultValue={data?.estimated_total_budget} />
+                    <InputField label="Due Date" type="date" defaultValue={moment(data.dueDate).format('YYYY-MM-DD')} />
+                    <InputField label="Status" type="text" defaultValue={data.status} />
+                </div>
 
-            <div className="flex items-center justify-center space-x-4">
-                <Button label="Save" onClick={handleSubmit} />
-                <Button label="Cancel" onClick={handleCancel} />
+                <div className="flex items-center justify-center space-x-4">
+                    <Button label="Save" onClick={handleSubmit} />
+                    <Button label="Cancel" onClick={handleCancel} />
+                </div>
             </div>
-        </div>
+        </>
     );
 }
