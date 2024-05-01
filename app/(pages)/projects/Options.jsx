@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 const OptionButton = ({ label, onClick }) => (
     <div className="flex-grow">
         <button
-            className="w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+            className="w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-green-600"
             onClick={onClick}
         >
             {label}
@@ -12,7 +12,7 @@ const OptionButton = ({ label, onClick }) => (
     </div>
 );
 
-export default function Options({ handleModal }) {
+export default function Options({ handleModal,data }) {
     const handleOption = (option) => {
         switch (option) {
             case "edit":

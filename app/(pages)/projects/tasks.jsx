@@ -8,6 +8,7 @@ import "./projects.css"
 import ProjectTitle from "@/app/utils/projectTitle";
 import ShowPage from "@/app/utils/Pagination";
 import Modal from "@/app/utils/Modal";
+import EditInfo from "./EditInfo";
 
 export default function Tasks() {
     let { tasks, setTasks, setCurrentPage, currentPage } = useProjectsStore();
@@ -28,8 +29,8 @@ export default function Tasks() {
 
     return (
         <div className="space-y-3 py-10">
-            {tasks.map(project => {
-                const { id, title, description, status, dueDate, } = project;
+            {tasks.map(task => {
+                const { id, title, description, status, dueDate, } = task;
                 return (
                     <div key={id} className="flex items-center p-4 border border-gray-200 rounded-md">
                         <div className="flex-1 min-w-[30%]">
@@ -52,16 +53,13 @@ export default function Tasks() {
                                 <ProjectTitle name="Due Date" />
                             </div>
                         </div>
-                        <Options handleModal={handleModal}/>
-                        <Modal openModal={openModal} />
+                        <Options handleModal={handleModal} data={task} />
+                        <Modal openModal={openModal} handleModal={handleModal} data={task} />
                     </div>
                 )
             })}
 
-
-            <button onClick={() => handleModal()}>Open</button>
-          
-
+            {/* <button onClick={() => handleModal()}>Open</button> */}
 
             <ShowPage
                 length={allTasks.length}
@@ -70,6 +68,7 @@ export default function Tasks() {
                 setCurrentPage={setCurrentPage}
                 type="tasksCurrentPage"
             />
+            {/* <EditInfo /> */}
         </div>
     )
 }

@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+"use client"
+import { useEffect, useState } from "react";
 import ProjectsData from "../../accessories/projects.json"
 import useProjectsStore from "@/app/store";
 import moment from "moment";
@@ -6,9 +7,15 @@ import Options from "./Options";
 import "./projects.css"
 import ProjectTitle from "@/app/utils/projectTitle";
 import ShowPage from "@/app/utils/Pagination";
+import Modal from "@/app/utils/Modal";
 
 export default function Projects() {
     let { projects, setProjects, setCurrentPage, currentPage } = useProjectsStore();
+    const [openModal, setOpenModal] = useState(false);
+
+    const handleModal = () => {
+        setOpenModal(!openModal);
+    }
 
     currentPage = currentPage.projectCurrentPage
     let pageItems = 3;
@@ -53,7 +60,8 @@ export default function Projects() {
                             </p>
                             <ProjectTitle name="status" />
                         </div>
-                        <Options/>
+                        <Options handleModal={handleModal} />
+                        <Modal openModal={openModal} handleModal={handleModal}  data={project} />
                     </div>
                 )
             })}
@@ -64,6 +72,7 @@ export default function Projects() {
                 setCurrentPage={setCurrentPage}
                 type="projectCurrentPage"
             />
+
         </div>
     )
 }
