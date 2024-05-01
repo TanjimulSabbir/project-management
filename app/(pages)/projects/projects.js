@@ -14,8 +14,8 @@ export default function Projects() {
     let pageItems = 3;
 
     console.log(currentPage, "from projects")
-    const allTasks = ProjectsData.projects.flatMap(project => project.tasks);
-    console.log(allTasks,"allTasks")
+    // const allTasks = ProjectsData.projects.flatMap(project => project.tasks);
+    // console.log(allTasks,"allTasks")
     useEffect(() => {
         setProjects(ProjectsData.projects.slice((currentPage - 1) * pageItems, pageItems * currentPage));
     }, [currentPage]);
@@ -32,8 +32,8 @@ export default function Projects() {
                         </div>
                         <div className="flex-1">
                             <p>
-                                <span>{tasks.filter(task => task.status === "Completed").length || 0}</span>/
-                                <span>{tasks.length}</span>
+                                <span>{tasks?.filter(task => task.status === "Completed").length || 0}</span>/
+                                <span>{tasks?.length}</span>
                             </p>
                             <ProjectTitle name="Tasks" />
                         </div>

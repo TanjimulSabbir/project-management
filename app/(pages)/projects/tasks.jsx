@@ -8,32 +8,32 @@ import ProjectTitle from "@/app/utils/projectTitle";
 import ShowPage from "@/app/utils/Pagination";
 
 export default function Tasks() {
-    let { tasks, setProjects, setCurrentPage, currentPage } = useProjectsStore();
+    let { tasks, setTasks, setCurrentPage, currentPage } = useProjectsStore();
 
     currentPage = currentPage.tasksCurrentPage;
     let pageItems = 3;
 
     console.log(currentPage, "from projects")
-
-    useEffect(() => {
-        const allTasks = ProjectsData.projects.flatMap(project => project.tasks)
-        setProjects(allTasks.slice((currentPage - 1) * pageItems, pageItems * currentPage));
+    const allTasks = ProjectsData.projects.flatMap(project => project.tasks);
+    console.log(allTasks,"allTasks")
+    useEffect(() => {    
+        setTasks(allTasks.slice((currentPage - 1) * pageItems, pageItems * currentPage));
         console.log((currentPage - 1) * pageItems, pageItems * currentPage)
     }, [currentPage]);
 
     return (
         <div className="space-y-3 py-10">
             {tasks.map(project => {
-                const { id, name, description, status, tasks, dueDate, estimated_total_budget } = project;
+                const { id, title, description, status, dueDate, } = project;
                 return (
                     <div key={id} className="flex items-center p-4 border border-gray-200 rounded-md">
                         <div className="flex-1 min-w-[30%]">
-                            <p>{name}</p>
+                            <p>{title}</p>
                             <ProjectTitle name="Development" />
                         </div>
                         <div className="flex-1">
                             <p>
-                                <span>{status}</span>/
+                                <span>{status}</span>
                             </p>
                             <ProjectTitle name="status" />
                         </div>
@@ -52,7 +52,7 @@ export default function Tasks() {
                 )
             })}
             <ShowPage
-                length={ProjectsData.projects.length}
+                length={allTasks.length}
                 pageItems={pageItems}
                 currentPage={currentPage.projectCurrentPage}
                 setCurrentPage={setCurrentPage}
