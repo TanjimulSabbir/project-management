@@ -19,23 +19,23 @@ const useProjectsStore = create((set) => ({
     // setTasks: (data) => set(state => ({ tasks: [...state.tasks, data] })),
 
     // Edit data
-    editProject: ({ id, newData }) => set(state => ({
-        projects: state.projects.map(project => project.id === id ? { ...project, ...newData } : project)
+    editProject: ({ id, updatedData }) => set(state => ({
+        projects: state.projects.map(project => project.id === id ? { ...project, ...updatedData } : project)
     })),
 
-    editTask: ({ id, newData }) => set(state => ({
-        tasks: state.tasks.map(task => task.id === id ? { ...task, ...newData } : task)
+    editTask: ({ id, updatedData }) => set(state => ({
+        tasks: state.tasks.map(task => task.id === id ? { ...task, ...updatedData } : task)
     })),
 
     // pagination
     setCurrentPage: ({ data, type }) => { set((state) => ({ currentPage: { ...state.currentPage, [type]: data } })) },
-    setIndividualPost: ({ data, type }) => { set(state => ({ ...state.individualPost, [type]: data })) },
+    setIndividualPost: ({ data, type }) => { set(state => ({ individualPost: { ...state.individualPost, [type]: data } })) },
 
     // delete
     removeData: ({ id, deleteType }) => set((state) => ({
         [deleteType]: state[deleteType].filter(item => item.id !== id)
     })),
-    setRemoveId: ({ id, type }) => set(state => ({ ...state.removeId, [type]: id }))
+    setRemoveId: ({ id, type }) => set(state => ({ removeId: { ...state.removeId, [type]: id } }))
 }));
 
 export default useProjectsStore;

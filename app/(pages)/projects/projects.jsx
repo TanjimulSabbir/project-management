@@ -64,11 +64,13 @@ export default function Projects() {
                             </p>
                             <ProjectTitle name="status" />
                         </div>
-                        <Options handleModal={handleModal} data={project} router={router} type="project" />
-                        <Modal openModal={openModal} handleModal={handleModal} data={project} type="project" />
+                        <Options handleModal={handleModal} data={project} type="project" />
+                        <Modal openModal={openModal} handleModal={handleModal} type="project" />
                     </div>
                 )
-            }) : "No Data Found!"}
+            }) : "No Data Found!"};
+
+
             <ShowPage
                 length={projects.length}
                 pageItems={pageItems}

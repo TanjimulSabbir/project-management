@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import useProjectsStore from "@/app/store";
 import ConfirmationModal from "@/app/utils/Confirmation";
@@ -17,15 +17,17 @@ const OptionButton = ({ label, onClick }) => (
 );
 
 export default function Options({ handleModal, data, type }) {
-    const router = useRouter();
     const { setIndividualPost, removeData, setRemoveId } = useProjectsStore();
+    const router = useRouter();
 
-    console.log(data, "from option")
+    useEffect(() => {
+        setIndividualPost({ data, type })
+    }, [data, type])
 
     const handleOption = (option) => {
         switch (option) {
             case "edit":
-                handleEdit();
+                handleEdit(data);
                 break;
             case "view_details":
                 handleViewDetails(data);
@@ -38,13 +40,14 @@ export default function Options({ handleModal, data, type }) {
         }
     };
 
-    const handleEdit = () => {
-        toast.success("Edit clicked");
+    const handleEdit = (data) => {
+        setIndividualPost({ data, type })
+        console.log({ data, type })
         handleModal();
     };
 
     const handleViewDetails = (data) => {
-        setIndividualPost({ data, type: "task" })
+        setIndividualPost({ data, type })
         router.push(`/projects/${data.id}`)
     };
 

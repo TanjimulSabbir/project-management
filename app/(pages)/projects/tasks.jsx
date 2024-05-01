@@ -29,12 +29,12 @@ export default function Tasks() {
 
     return (
         <div className="space-y-3 py-10">
-            {showData.map(task => {
-                const { id, title, description, status, dueDate, } = task;
+            {showData.length > 0 ? showData.map(task => {
+                const { id, name, description, status, dueDate, } = task;
                 return (
                     <div key={id} className="flex items-center p-4 border border-gray-200 rounded-md">
                         <div className="flex-1 min-w-[30%]">
-                            <p>{id}.{title}</p>
+                            <p>{id}. {name}</p>
                             <ProjectTitle name="Development" />
                         </div>
                         <div className="flex-1">
@@ -54,10 +54,12 @@ export default function Tasks() {
                             </div>
                         </div>
                         <Options handleModal={handleModal} data={task} type="task" />
-                        <Modal openModal={openModal} handleModal={handleModal} data={task} type="task" />
+                        <Modal openModal={openModal} handleModal={handleModal} type="task" />;
                     </div>
                 )
-            })}
+            }) : "No data found!"}
+
+           
 
             <ShowPage
                 length={tasks.length}
