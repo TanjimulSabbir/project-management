@@ -3,6 +3,7 @@ import Modal from "@/app/utils/Modal";
 import toast from "react-hot-toast";
 import moment from "moment";
 import ProjectTitle from "@/app/utils/projectTitle";
+import useProjectsStore from '@/app/store';
 
 // Reusable input component
 const InputField = ({ label, type = "task", defaultValue, placeholder }) => (
@@ -40,15 +41,39 @@ const EditProjectHeader = () => (
 );
 
 export default function EditInfo({ data, handleModal, type }) {
+    const { editTask, editProject } = useProjectsStore();
+
     const [status, setStatus] = useState(data.status);
     const [teamMember, setTeamMember] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission logic
+
+        if (type === "task") {
+            const updatedTaskData = {
+                title: e.target.elements.title.value,
+                description: e.target.elements.description.value,
+                status: e.target.elements.status.value,
+                dueDate: e.target.elements.dueDate.value
+            };
+
+            editTask(data.id, updatedTaskData);
+        } else if (type === "project") {
+            const updatedProjectData = {
+                name: e.target.elements.name.value,
+                description: e.target.elements.description.value,
+                status: e.target.elements.status.value,
+                dueDate: e.target.elements.dueDate.value,
+                estimated_total_budget: e.target.elements.budgets.value
+            };
+
+            editProject(data.id, updatedProjectData);
+        }
+
         toast.success("Project information updated!");
         handleModal();
     };
+
 
     const handleCancel = () => {
         handleModal();
