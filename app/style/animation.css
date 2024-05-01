@@ -1,0 +1,33 @@
+
+
+@keyframes grow {
+    from {
+        scale: .25;
+        opacity: .25;
+    }
+
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        scale: 1;
+        opacity: .95;
+    }
+
+    to {
+        scale: 0;
+        opacity: 0;
+    }
+}
+
+.grow {
+    animation: grow 500ms ease-in-out;
+}
+
+.fade-out {
+    animation: fade-out 500ms ease-in-out;
+}

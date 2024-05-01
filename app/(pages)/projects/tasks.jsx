@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+"use client"
+import { useEffect, useState } from "react";
 import ProjectsData from "../../accessories/projects.json"
 import useProjectsStore from "@/app/store";
 import moment from "moment";
@@ -6,17 +7,21 @@ import Options from "./Options";
 import "./projects.css"
 import ProjectTitle from "@/app/utils/projectTitle";
 import ShowPage from "@/app/utils/Pagination";
+import Modal from "@/app/utils/Modal";
 
 export default function Tasks() {
     let { tasks, setTasks, setCurrentPage, currentPage } = useProjectsStore();
+    const [openModal, setOpenModal] = useState(false);
+
+    const handleModal = () => {
+        setOpenModal(!openModal);
+    }
 
     currentPage = currentPage.tasksCurrentPage;
     let pageItems = 3;
-
-    console.log(currentPage, "from projects")
     const allTasks = ProjectsData.projects.flatMap(project => project.tasks);
-    console.log(allTasks,"allTasks")
-    useEffect(() => {    
+
+    useEffect(() => {
         setTasks(allTasks.slice((currentPage - 1) * pageItems, pageItems * currentPage));
         console.log((currentPage - 1) * pageItems, pageItems * currentPage)
     }, [currentPage]);
@@ -47,10 +52,17 @@ export default function Tasks() {
                                 <ProjectTitle name="Due Date" />
                             </div>
                         </div>
-                        <Options />
+                        <Options handleModal={handleModal}/>
+                        <Modal openModal={openModal} />
                     </div>
                 )
             })}
+
+
+            <button onClick={() => handleModal()}>Open</button>
+          
+
+
             <ShowPage
                 length={allTasks.length}
                 pageItems={pageItems}

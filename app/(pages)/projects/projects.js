@@ -26,28 +26,34 @@ export default function Projects() {
                 const { id, name, description, status, dueDate, tasks, estimated_total_budget } = project;
                 return (
                     <div key={id} className="flex items-center p-4 border border-gray-200 rounded-md">
-                        <div className="flex-1 min-w-[30%]">
+                        <div className="flex-1 min-w-[20%]">
                             <p>{name}</p>
                             <ProjectTitle name="Development" />
                         </div>
-                        <div className="flex-1">
+                        <div className="flex-1 text-center">
                             <p>
                                 <span>{tasks?.filter(task => task.status === "Completed").length || 0}</span>/
                                 <span>{tasks?.length}</span>
                             </p>
                             <ProjectTitle name="Tasks" />
                         </div>
-                        <div className="flex-1">
+                        <div className="flex-1 text-center">
                             <p>${estimated_total_budget}</p>
                             <ProjectTitle name="Budgets" />
                         </div>
-                        <div className="flex-1">
+                        <div className="flex-1 text-center">
                             <div>
                                 <p>{moment(dueDate).format('DD MMMM YYYY')}</p>
                                 <ProjectTitle name="Due Date" />
                             </div>
                         </div>
-                        <Options />
+                        <div className="flex-1 min-w-[10%] mx-auto text-center">
+                            <p>
+                                <span>{status}</span>
+                            </p>
+                            <ProjectTitle name="status" />
+                        </div>
+                        <Options/>
                     </div>
                 )
             })}
