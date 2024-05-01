@@ -3,11 +3,10 @@ import create from 'zustand';
 const useProjectsStore = create((set) => ({
     projects: [],
     tasks: [],
-    currentPage: 1,
+    currentPage: { projectCurrentPage: 1, tasksCurrentPage: 1 },
     setProjects: (data) => set({ projects: data }),
-    setCurrentPage: (currentPage) => set({ currentPage }),
+    setCurrentPage: ({ data, type }) => { set((state) => ({ currentPage: { ...state.currentPage, [type]: data } })); },
     setTasks: (data) => set({ tasks: data })
-
 }));
 
 export default useProjectsStore;

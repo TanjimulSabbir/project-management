@@ -8,15 +8,16 @@ import ProjectTitle from "@/app/utils/projectTitle";
 import ShowPage from "@/app/utils/Pagination";
 
 export default function Projects() {
-    const { projects, setProjects, setCurrentPage, currentPage } = useProjectsStore();
+    let { projects, setProjects, setCurrentPage, currentPage } = useProjectsStore();
 
+    currentPage = currentPage.projectCurrentPage
     let pageItems = 3;
 
     console.log(currentPage, "from projects")
-
+    const allTasks = ProjectsData.projects.flatMap(project => project.tasks);
+    console.log(allTasks,"allTasks")
     useEffect(() => {
         setProjects(ProjectsData.projects.slice((currentPage - 1) * pageItems, pageItems * currentPage));
-        console.log((currentPage - 1) * pageItems, pageItems * currentPage)
     }, [currentPage]);
 
     return (
@@ -55,6 +56,7 @@ export default function Projects() {
                 pageItems={pageItems}
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
+                type="projectCurrentPage"
             />
         </div>
     )

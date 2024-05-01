@@ -1,12 +1,11 @@
 import React from 'react';
 import { Pagination } from 'antd';
-import useProjectsStore from '../store';
-import toast from 'react-hot-toast';
 
-const ShowPage = ({ length, pageItems,currentPage,setCurrentPage }) => {
+const ShowPage = ({ length, pageItems, currentPage, setCurrentPage, type }) => {
 
     const handlePageChange = (pageNumber) => {
-        setCurrentPage(pageNumber);
+        setCurrentPage({ data: pageNumber, type });
+        console.log({ data: pageNumber, type })
     };
 
     return (
