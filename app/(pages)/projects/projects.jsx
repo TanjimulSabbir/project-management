@@ -8,10 +8,13 @@ import "./projects.css"
 import ProjectTitle from "@/app/utils/projectTitle";
 import ShowPage from "@/app/utils/Pagination";
 import Modal from "@/app/utils/Modal";
+import { useRouter } from "next/navigation";
 
 export default function Projects() {
     let { projects, setProjects, setCurrentPage, currentPage } = useProjectsStore();
     const [openModal, setOpenModal] = useState(false);
+
+    const router = useRouter();
 
     const handleModal = () => {
         setOpenModal(!openModal);
@@ -60,8 +63,8 @@ export default function Projects() {
                             </p>
                             <ProjectTitle name="status" />
                         </div>
-                        <Options handleModal={handleModal} />
-                        <Modal openModal={openModal} handleModal={handleModal}  data={project} />
+                        <Options handleModal={handleModal} data={project} router={router} />
+                        <Modal openModal={openModal} handleModal={handleModal} data={project} />
                     </div>
                 )
             })}

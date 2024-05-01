@@ -1,3 +1,6 @@
+"use client"
+import useProjectsStore from "@/app/store";
+import ConfirmationModal from "@/app/utils/Confirmation";
 import toast from "react-hot-toast";
 
 // Reusable button component
@@ -12,14 +15,15 @@ const OptionButton = ({ label, onClick }) => (
     </div>
 );
 
-export default function Options({ handleModal,data }) {
+export default function Options({ handleModal, data, router }) {
+    let { individualPost, setIndividualPost } = useProjectsStore();
     const handleOption = (option) => {
         switch (option) {
             case "edit":
                 handleEdit();
                 break;
             case "view_details":
-                handleViewDetails();
+                handleViewDetails(data);
                 break;
             case "delete":
                 handleDelete();
@@ -34,19 +38,26 @@ export default function Options({ handleModal,data }) {
         handleModal();
     };
 
-    const handleViewDetails = () => {
-        toast.success("View Details clicked");
+    const handleViewDetails = (data) => {
+        console.log(data)
+        setIndividualPost({ data, type: "task" })
+        router.push(`/projects/${data.id}`)
     };
 
     const handleDelete = () => {
-        toast.success("Delete clicked");
+        setIndividualPost(prevState => ({
+            ...prevState, project: {}
+        }));
     };
 
     return (
-        <div className="flex items-center space-x-4">
-            <OptionButton label="Edit" onClick={() => handleOption("edit")} />
-            <OptionButton label="View Details" onClick={() => handleOption("view_details")} />
-            <OptionButton label="Delete" onClick={() => handleOption("delete")} />
-        </div>
+        <>
+            <div className="flex items-center space-x-4">
+                <OptionButton label="Edit" onClick={() => handleOption("edit")} />
+                <OptionButton label="View Details" onClick={() => handleOption("view_details")} />
+                <OptionButton label="Delete" onClick={() => handleOption("delete")} />
+            </div>
+            <ConfirmationModal message={"Do you want to delete this project?"} onConfirm={handleDelete} />
+        </>
     );
 }

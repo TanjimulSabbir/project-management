@@ -33,6 +33,6 @@ select:focus {
 }
 
 /* Change arrow color on hover */
-select:hover + .arrow-icon {
+select:hover+.arrow-icon {
     fill: #718096;
 }

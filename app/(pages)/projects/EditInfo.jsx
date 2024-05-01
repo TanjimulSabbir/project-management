@@ -5,7 +5,7 @@ import moment from "moment";
 import ProjectTitle from "@/app/utils/projectTitle";
 
 // Reusable input component
-const InputField = ({ label, type="task", defaultValue, placeholder }) => (
+const InputField = ({ label, type = "task", defaultValue, placeholder }) => (
     <div className="flex flex-col w-full">
         <label className="text-sm font-semibold">{label}</label>
         {type === "task" ? (
@@ -39,7 +39,7 @@ const EditProjectHeader = () => (
     <div className="pb-3 text-center font-semibold text-xl">Edit Project</div>
 );
 
-export default function EditInfo({ data, handleModal, type }) {
+export default function EditInfo({ data, handleModal, type = "task" }) {
     const [status, setStatus] = useState(data.status);
     const [teamMember, setTeamMember] = useState("");
 
@@ -61,8 +61,9 @@ export default function EditInfo({ data, handleModal, type }) {
                 <form onSubmit={handleSubmit} className="space-y-7 mb-5">
                     <InputField label="Name" type="text" defaultValue={data.name} placeholder="Enter project name" />
                     <InputField label="Description" type="textarea" defaultValue={data.description} placeholder="Enter project description" />
-                    {type === "task" && (
-                        <InputField label="Add Member" type="text" defaultValue={teamMember} placeholder="Enter team member name" />
+
+                    {"task" === "task" && (
+                        <InputField label="Add Member" type="text" defaultValue={teamMember||""} placeholder="Enter team member name" />
                     )}
                     {type === "project" && (
                         <InputField label="Budgets" type="number" defaultValue={data?.estimated_total_budget} placeholder="Enter estimated total budget" />

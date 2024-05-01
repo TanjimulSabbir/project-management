@@ -1,5 +1,3 @@
-
-
 @keyframes grow {
     from {
         scale: .25;
@@ -24,10 +22,26 @@
     }
 }
 
+@keyframes top_To_Down_Slider {
+    from {
+        transform: translateY(-100%);
+        opacity: .25;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
 .grow {
     animation: grow 500ms ease-in-out;
 }
 
 .fade-out {
     animation: fade-out 500ms ease-in-out;
+}
+
+.top_To_Down_Slider {
+    animation: downSlider 500ms ease-in-out;
 }
