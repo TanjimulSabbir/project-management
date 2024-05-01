@@ -2,14 +2,17 @@
 import React, { useState } from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
 import toast from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
+import { handleLogin } from './utils/handleLogin';
 
 const LoginForm = () => {
-  const [erro, setError] = useState(false)
+  const [erro, setError] = useState(false);
+  const router = useRouter();
+
   const onFinish = (values) => {
     if (values.password) setError(false);
-
     if (values.email && values.password) {
-      toast.success("Login successful!")
+      handleLogin({ data: values, status: "ok",router })
     }
   };
 
@@ -19,10 +22,10 @@ const LoginForm = () => {
 
   return (
     <div>
-      <div className='h-screen w-full flex items-center justify-center border border-gray-600 shadow-2xl rounded-lg'>
+      <div className='h-screen w-full flex items-center justify-center '>
 
         <Form
-          className='w-[250px] sm:w-[300px] md:w-[400px] '
+          className='w-[250px] sm:w-[300px] md:w-[400px]'
           name="basic"
           layout="vertical"
           initialValues={{

@@ -1,0 +1,731 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "Website Redesign",
+            "description": "Redesign the company website to improve user experience and update content.",
+            "status": "In Progress",
+            "dueDate": "2024-06-30",
+            "members": {
+                "project_id": 1,
+                "task_member": [
+                    {
+                        "task_id": 1,
+                        "team": []
+                    },
+                    {
+                        "task_id": 2,
+                        "team": []
+                    },
+                    {
+                        "task_id": 3,
+                        "team": []
+                    }
+                ]
+            },
+            "tasks": [
+                {
+                    "id": 1,
+                    "title": "Gather Requirements",
+                    "description": "Meet with stakeholders to gather requirements for the website redesign.",
+                    "status": "In Progress",
+                    "dueDate": "2024-05-10"
+                },
+                {
+                    "id": 2,
+                    "title": "Design Mockups",
+                    "description": "Create mockups for the new website design based on gathered requirements.",
+                    "status": "To Do",
+                    "dueDate": "2024-05-15"
+                },
+                {
+                    "id": 3,
+                    "title": "Develop Frontend",
+                    "description": "Develop the frontend of the website using React and Tailwind CSS.",
+                    "status": "To Do",
+                    "dueDate": "2024-06-10"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Marketing Campaign",
+            "description": "Launch a marketing campaign to promote the new product.",
+            "status": "To Do",
+            "dueDate": "2024-07-15",
+            "tasks": [
+                {
+                    "id": 4,
+                    "title": "Create Campaign Plan",
+                    "description": "Develop a comprehensive plan for the marketing campaign including target audience, messaging, and channels.",
+                    "status": "In Progress",
+                    "dueDate": "2024-05-20"
+                },
+                {
+                    "id": 5,
+                    "title": "Design Marketing Materials",
+                    "description": "Design promotional materials such as banners, flyers, and social media posts.",
+                    "status": "To Do",
+                    "dueDate": "2024-06-01"
+                },
+                {
+                    "id": 6,
+                    "title": "Launch Campaign",
+                    "description": "Execute the marketing campaign across various channels.",
+                    "status": "To Do",
+                    "dueDate": "2024-06-15"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Product Development",
+            "description": "Develop a new product to meet market demand.",
+            "status": "Completed",
+            "dueDate": "2024-05-31",
+            "tasks": [
+                {
+                    "id": 7,
+                    "title": "Market Research",
+                    "description": "Conduct market research to identify opportunities and validate product idea.",
+                    "status": "Completed",
+                    "dueDate": "2024-04-15"
+                },
+                {
+                    "id": 8,
+                    "title": "Prototype Development",
+                    "description": "Build a prototype of the product to test its functionality and usability.",
+                    "status": "Completed",
+                    "dueDate": "2024-04-30"
+                },
+                {
+                    "id": 9,
+                    "title": "Product Testing",
+                    "description": "Test the product with beta users and gather feedback for improvements.",
+                    "status": "Completed",
+                    "dueDate": "2024-05-15"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Internal Training Program",
+            "description": "Implement a training program to upskill employees.",
+            "status": "In Progress",
+            "dueDate": "2024-08-30",
+            "tasks": [
+                {
+                    "id": 10,
+                    "title": "Training Needs Assessment",
+                    "description": "Identify training needs and requirements through employee surveys and performance reviews.",
+                    "status": "In Progress",
+                    "dueDate": "2024-06-15"
+                },
+                {
+                    "id": 11,
+                    "title": "Develop Training Modules",
+                    "description": "Create training modules for different skill sets and departments.",
+                    "status": "To Do",
+                    "dueDate": "2024-07-15"
+                },
+                {
+                    "id": 12,
+                    "title": "Launch Training Program",
+                    "description": "Roll out the training program and provide ongoing support and feedback.",
+                    "status": "To Do",
+                    "dueDate": "2024-08-01"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Mobile App Development",
+            "description": "Develop a mobile application for iOS and Android platforms.",
+            "status": "To Do",
+            "dueDate": "2024-09-30",
+            "tasks": [
+                {
+                    "id": 13,
+                    "title": "Define App Features",
+                    "description": "Define the features and functionality of the mobile app.",
+                    "status": "To Do",
+                    "dueDate": "2024-07-15"
+                },
+                {
+                    "id": 14,
+                    "title": "Design UI/UX",
+                    "description": "Design the user interface and user experience for the mobile app.",
+                    "status": "To Do",
+                    "dueDate": "2024-08-01"
+                },
+                {
+                    "id": 15,
+                    "title": "Develop Backend",
+                    "description": "Develop the backend infrastructure and APIs for the mobile app.",
+                    "status": "To Do",
+                    "dueDate": "2024-08-15"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Content Creation",
+            "description": "Create high-quality content for the company blog and social media channels.",
+            "status": "To Do",
+            "dueDate": "2024-10-31",
+            "tasks": [
+                {
+                    "id": 16,
+                    "title": "Content Strategy",
+                    "description": "Develop a content strategy outlining topics, formats, and distribution channels.",
+                    "status": "To Do",
+                    "dueDate": "2024-08-31"
+                },
+                {
+                    "id": 17,
+                    "title": "Write Blog Posts",
+                    "description": "Write informative and engaging blog posts on relevant industry topics.",
+                    "status": "To Do",
+                    "dueDate": "2024-09-15"
+                },
+                {
+                    "id": 18,
+                    "title": "Create Social Media Content",
+                    "description": "Create visually appealing and engaging content for social media platforms.",
+                    "status": "To Do",
+                    "dueDate": "2024-10-01"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Customer Support Improvement",
+            "description": "Improve the company's customer support process and infrastructure.",
+            "status": "To Do",
+            "dueDate": "2024-11-30",
+            "tasks": [
+                {
+                    "id": 19,
+                    "title": "Assess Current Process",
+                    "description": "Evaluate the current customer support process and identify pain points.",
+                    "status": "To Do",
+                    "dueDate": "2024-09-30"
+                },
+                {
+                    "id": 20,
+                    "title": "Implement Help Desk Software",
+                    "description": "Select and implement a help desk software to streamline customer support.",
+                    "status": "To Do",
+                    "dueDate": "2024-10-15"
+                },
+                {
+                    "id": 21,
+                    "title": "Train Support Team",
+                    "description": "Provide training to the support team on the new processes and tools.",
+                    "status": "To Do",
+                    "dueDate": "2024-11-01"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Sales Strategy Optimization",
+            "description": "Optimize the company's sales strategy to increase revenue and market share.",
+            "status": "To Do",
+            "dueDate": "2024-12-31",
+            "tasks": [
+                {
+                    "id": 22,
+                    "title": "Sales Analysis",
+                    "description": "Analyze sales data and trends to identify areas for improvement.",
+                    "status": "To Do",
+                    "dueDate": "2024-10-31"
+                },
+                {
+                    "id": 23,
+                    "title": "Revise Sales Process",
+                    "description": "Revise the sales process to streamline operations and improve efficiency.",
+                    "status": "To Do",
+                    "dueDate": "2024-11-15"
+                },
+                {
+                    "id": 24,
+                    "title": "Implement CRM System",
+                    "description": "Select and implement a CRM system to manage customer relationships and sales pipelines.",
+                    "status": "To Do",
+                    "dueDate": "2024-12-01"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Finance Department Restructuring",
+            "description": "Restructure the finance department to enhance financial management and reporting.",
+            "status": "To Do",
+            "dueDate": "2025-01-31",
+            "tasks": [
+                {
+                    "id": 25,
+                    "title": "Assess Current Structure",
+                    "description": "Assess the current structure and processes of the finance department.",
+                    "status": "To Do",
+                    "dueDate": "2024-11-30"
+                },
+                {
+                    "id": 26,
+                    "title": "Develop New Organizational Structure",
+                    "description": "Develop a new organizational structure that aligns with the company's goals and objectives.",
+                    "status": "To Do",
+                    "dueDate": "2024-12-15"
+                },
+                {
+                    "id": 27,
+                    "title": "Implement Changes",
+                    "description": "Implement the new organizational structure and processes.",
+                    "status": "To Do",
+                    "dueDate": "2025-01-15"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "name": "Supply Chain Optimization",
+            "description": "Optimize the company's supply chain to reduce costs and improve efficiency.",
+            "status": "To Do",
+            "dueDate": "2025-02-28",
+            "tasks": [
+                {
+                    "id": 28,
+                    "title": "Supply Chain Analysis",
+                    "description": "Conduct a thorough analysis of the company's supply chain operations.",
+                    "status": "To Do",
+                    "dueDate": "2025-01-31"
+                },
+                {
+                    "id": 29,
+                    "title": "Identify Areas for Improvement",
+                    "description": "Identify areas within the supply chain that can be optimized for cost reduction and efficiency.",
+                    "status": "To Do",
+                    "dueDate": "2025-02-15"
+                },
+                {
+                    "id": 30,
+                    "title": "Implement Changes",
+                    "description": "Implement changes to the supply chain processes and logistics.",
+                    "status": "To Do",
+                    "dueDate": "2025-02-28"
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "name": "Employee Wellness Program",
+            "description": "Implement a wellness program to promote employee health and well-being.",
+            "status": "To Do",
+            "dueDate": "2025-03-31",
+            "tasks": [
+                {
+                    "id": 31,
+                    "title": "Survey Employees",
+                    "description": "Survey employees to understand their wellness needs and preferences.",
+                    "status": "To Do",
+                    "dueDate": "2025-02-28"
+                },
+                {
+                    "id": 32,
+                    "title": "Develop Program",
+                    "description": "Develop a wellness program that includes activities, resources, and support.",
+                    "status": "To Do",
+                    "dueDate": "2025-03-15"
+                },
+                {
+                    "id": 33,
+                    "title": "Launch Program",
+                    "description": "Launch the wellness program and promote participation among employees.",
+                    "status": "To Do",
+                    "dueDate": "2025-03-31"
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "name": "IT Infrastructure Upgrade",
+            "description": "Upgrade the company's IT infrastructure to support growth and improve security.",
+            "status": "To Do",
+            "dueDate": "2025-04-30",
+            "tasks": [
+                {
+                    "id": 34,
+                    "title": "Assessment and Planning",
+                    "description": "Assess current IT infrastructure and plan upgrades and improvements.",
+                    "status": "To Do",
+                    "dueDate": "2025-03-15"
+                },
+                {
+                    "id": 35,
+                    "title": "Implement Upgrades",
+                    "description": "Implement upgrades to hardware, software, and network infrastructure.",
+                    "status": "To Do",
+                    "dueDate": "2025-04-15"
+                },
+                {
+                    "id": 36,
+                    "title": "Testing and Optimization",
+                    "description": "Test new infrastructure and optimize performance and security.",
+                    "status": "To Do",
+                    "dueDate": "2025-04-30"
+                }
+            ]
+        }
+    ],
+    "members": [
+        {
+            "project_id": 1,
+            "project_member": [
+                {
+                    "task_id": 1,
+                    "team": [
+                        "John Doe",
+                        "Alice Johnson",
+                        "Michael Smith"
+                    ]
+                },
+                {
+                    "task_id": 2,
+                    "team": [
+                        "Jane Smith",
+                        "Bob Williams",
+                        "Emma Brown"
+                    ]
+                },
+                {
+                    "task_id": 3,
+                    "team": [
+                        "Eva Brown",
+                        "Michael Davis",
+                        "Sophia Wilson"
+                    ]
+                }
+            ]
+        },
+        {
+            "project_id": 2,
+            "project_member": [
+                {
+                    "task_id": 1,
+                    "team": [
+                        "David Lee",
+                        "Olivia Taylor",
+                        "William Martinez"
+                    ]
+                },
+                {
+                    "task_id": 2,
+                    "team": [
+                        "Sophie Jones",
+                        "James Clark",
+                        "Isabella Thomas"
+                    ]
+                },
+                {
+                    "task_id": 3,
+                    "team": [
+                        "Liam Johnson",
+                        "Emily Garcia",
+                        "Jacob Wilson"
+                    ]
+                }
+            ]
+        },
+        {
+            "project_id": 3,
+            "project_member": [
+                {
+                    "task_id": 1,
+                    "team": [
+                        "Charlotte Anderson",
+                        "Daniel Harris",
+                        "Ava Wilson"
+                    ]
+                },
+                {
+                    "task_id": 2,
+                    "team": [
+                        "Ethan White",
+                        "Mia Davis",
+                        "Alexander Rodriguez"
+                    ]
+                },
+                {
+                    "task_id": 3,
+                    "team": [
+                        "Amelia Martinez",
+                        "Matthew Thompson",
+                        "Harper Walker"
+                    ]
+                }
+            ]
+        },
+        {
+            "project_id": 4,
+            "project_member": [
+                {
+                    "task_id": 1,
+                    "team": [
+                        "Benjamin Allen",
+                        "Sophia Turner",
+                        "Logan Harris"
+                    ]
+                },
+                {
+                    "task_id": 2,
+                    "team": [
+                        "Aiden King",
+                        "Abigail Hall",
+                        "Lucas Lopez"
+                    ]
+                },
+                {
+                    "task_id": 3,
+                    "team": [
+                        "Ella Scott",
+                        "Nathan Young",
+                        "Victoria Parker"
+                    ]
+                }
+            ]
+        },
+        {
+            "project_id": 5,
+            "project_member": [
+                {
+                    "task_id": 1,
+                    "team": [
+                        "Chloe Carter",
+                        "Samuel Perez",
+                        "Zoe Mitchell"
+                    ]
+                },
+                {
+                    "task_id": 2,
+                    "team": [
+                        "Jack Morris",
+                        "Hannah Nelson",
+                        "Gabriel Cook"
+                    ]
+                },
+                {
+                    "task_id": 3,
+                    "team": [
+                        "Sofia Price",
+                        "Dylan Adams",
+                        "Madison Ward"
+                    ]
+                }
+            ]
+        },
+        {
+            "project_id": 6,
+            "project_member": [
+                {
+                    "task_id": 1,
+                    "team": [
+                        "Avery Wright",
+                        "Anthony Hall",
+                        "Grace Rivera"
+                    ]
+                },
+                {
+                    "task_id": 2,
+                    "team": [
+                        "Elijah Reed",
+                        "Lily Wood",
+                        "Henry Cox"
+                    ]
+                },
+                {
+                    "task_id": 3,
+                    "team": [
+                        "Evelyn Foster",
+                        "Andrew Bell",
+                        "Aria Flores"
+                    ]
+                }
+            ]
+        },
+        {
+            "project_id": 7,
+            "project_member": [
+                {
+                    "task_id": 1,
+                    "team": [
+                        "Bella Collins",
+                        "Jackson Murphy",
+                        "Scarlett Rogers"
+                    ]
+                },
+                {
+                    "task_id": 2,
+                    "team": [
+                        "Levi Morris",
+                        "Natalie Cooper",
+                        "Owen Richardson"
+                    ]
+                },
+                {
+                    "task_id": 3,
+                    "team": [
+                        "Luna Simmons",
+                        "Christian Bailey",
+                        "Peyton Stewart"
+                    ]
+                }
+            ]
+        },
+        {
+            "project_id": 8,
+            "project_member": [
+                {
+                    "task_id": 1,
+                    "team": [
+                        "Leah Washington",
+                        "Christopher Kelly",
+                        "Eli Hayes"
+                    ]
+                },
+                {
+                    "task_id": 2,
+                    "team": [
+                        "Mila Russell",
+                        "Carter Turner",
+                        "Samantha Evans"
+                    ]
+                },
+                {
+                    "task_id": 3,
+                    "team": [
+                        "Dominic Murphy",
+                        "Zoey Parker",
+                        "Tyler Gray"
+                    ]
+                }
+            ]
+        },
+        {
+            "project_id": 9,
+            "project_member": [
+                {
+                    "task_id": 1,
+                    "team": [
+                        "Elena Hughes",
+                        "Jordan Wood",
+                        "Brooklyn Price"
+                    ]
+                },
+                {
+                    "task_id": 2,
+                    "team": [
+                        "Aaron Diaz",
+                        "Madelyn Morgan",
+                        "Gavin Griffin"
+                    ]
+                },
+                {
+                    "task_id": 3,
+                    "team": [
+                        "Audrey Carter",
+                        "Julian Torres",
+                        "Reagan Cook"
+                    ]
+                }
+            ]
+        },
+        {
+            "project_id": 10,
+            "project_member": [
+                {
+                    "task_id": 1,
+                    "team": [
+                        "Katherine Butler",
+                        "Colton Brooks",
+                        "Alexa Mitchell"
+                    ]
+                },
+                {
+                    "task_id": 2,
+                    "team": [
+                        "Grayson Hughes",
+                        "Vanessa Foster",
+                        "Parker Bennett"
+                    ]
+                },
+                {
+                    "task_id": 3,
+                    "team": [
+                        "Trinity Rivera",
+                        "Adrian Hill",
+                        "Maya Jenkins"
+                    ]
+                }
+            ]
+        },
+        {
+            "project_id": 11,
+            "project_member": [
+                {
+                    "task_id": 1,
+                    "team": [
+                        "Aiden Montgomery",
+                        "Gabriella Ramirez",
+                        "Carlos Bryant"
+                    ]
+                },
+                {
+                    "task_id": 2,
+                    "team": [
+                        "Ella Cole",
+                        "Oscar Coleman",
+                        "Amaya Ellis"
+                    ]
+                },
+                {
+                    "task_id": 3,
+                    "team": [
+                        "Hudson Mitchell",
+                        "Claire Harrison",
+                        "Jaden Murray"
+                    ]
+                }
+            ]
+        },
+        {
+            "project_id": 12,
+            "project_member": [
+                {
+                    "task_id": 1,
+                    "team": [
+                        "Brody Torres",
+                        "Lyla Bennett",
+                        "Miles Peterson"
+                    ]
+                },
+                {
+                    "task_id": 2,
+                    "team": [
+                        "Kylie Brooks",
+                        "Jaxson Washington",
+                        "Faith Henderson"
+                    ]
+                },
+                {
+                    "task_id": 3,
+                    "team": [
+                        "Riley Carter",
+                        "Lincoln Coleman",
+                        "Ariana Rodriguez"
+                    ]
+                }
+            ]
+        }
+    ]
+}
