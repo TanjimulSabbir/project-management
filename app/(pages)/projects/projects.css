@@ -1,0 +1,38 @@
+/* Style the select box */
+select {
+    background-color: #edf2f7;
+    border: 1px solid #a0aec0;
+    color: #4a5568;
+    padding: 10px 20px;
+    border-radius: 0.375rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Style the dropdown arrow */
+select::-ms-expand {
+    display: none;
+}
+
+/* Add hover effect */
+select:hover {
+    border-color: #718096;
+}
+
+/* Add focus effect */
+select:focus {
+    outline: none;
+    border-color: #63b3ed;
+}
+
+/* Style the arrow icon */
+.arrow-icon {
+    fill: #4a5568;
+    transition: fill 0.3s;
+}
+
+/* Change arrow color on hover */
+select:hover + .arrow-icon {
+    fill: #718096;
+}

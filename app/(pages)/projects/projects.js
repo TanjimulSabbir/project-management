@@ -1,27 +1,55 @@
 import { useEffect } from "react";
 import ProjectsData from "../../accessories/projects.json"
 import useProjectsStore from "@/app/store";
+import moment from "moment";
+import Options from "./Options";
+import "./projects.css"
+import ProjectTitle from "@/app/utils/projectTitle";
+import ShowPage from "@/app/utils/Pagination";
 
 export default function Projects() {
     const { projects, setProjects } = useProjectsStore();
+    const currentPage = useProjectsStore((state) => state.currentPage);
+    let pageItems = 3;
+    console.log(e, "projectDataSlice")
 
     useEffect(() => {
-        // Fetch data and set it in the store
-        setProjects(ProjectsData.projects);
-    }, [projects]);
+        setProjects(ProjectsData.projects.slice(currentPage - 1, pageItems * currentPage));
+        console.log(currentPage - 1, pageItems * currentPage, "projectDataSlice")
+    }, [currentPage]);
 
     return (
-        <div>
+        <div className="space-y-3 py-10">
             {projects.map(project => {
-                const { id, name, description, status, dueDate } = project;
+                const { id, name, description, status, dueDate, tasks, estimated_total_budget } = project;
                 return (
-                    <div key={id} className="py-4 bg-gray-200 shadow-xl">
-                        <p>{name}</p>
-                        <p>{status}</p>
-                        <p>{dueDate}</p>
+                    <div key={id} className="flex items-center p-4 border border-gray-200 rounded-md">
+                        <div className="flex-1 min-w-[30%]">
+                            <p>{name}</p>
+                            <ProjectTitle name="Development" />
+                        </div>
+                        <div className="flex-1"> {/* Adjust the width as needed */}
+                            <p>
+                                <span>{tasks.filter(task => task.status === "Completed").length || 0}</span>/
+                                <span>{tasks.length}</span>
+                            </p>
+                            <ProjectTitle name="Tasks" />
+                        </div>
+                        <div className="flex-1"> {/* Adjust the width as needed */}
+                            <p>${estimated_total_budget}</p>
+                            <ProjectTitle name="Budgets" />
+                        </div>
+                        <div className="flex-1"> {/* Adjust the width as needed */}
+                            <p>
+                                <p>{moment(dueDate).format('DD MMMM YYYY')}</p>
+                                <ProjectTitle name="Due Date" />
+                            </p>
+                        </div>
+                        <Options />
                     </div>
                 )
             })}
+            <ShowPage length={ProjectsData.projects.length} pageItems={pageItems} />
         </div>
     )
 }

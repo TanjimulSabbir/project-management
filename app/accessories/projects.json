@@ -6,23 +6,33 @@
             "description": "Redesign the company website to improve user experience and update content.",
             "status": "In Progress",
             "dueDate": "2024-06-30",
-            "members": {
-                "project_id": 1,
-                "task_member": [
-                    {
-                        "task_id": 1,
-                        "team": []
-                    },
-                    {
-                        "task_id": 2,
-                        "team": []
-                    },
-                    {
-                        "task_id": 3,
-                        "team": []
-                    }
-                ]
-            },
+            "estimated_total_budget": 50000,
+            "members": [
+                {
+                    "task_id": 1,
+                    "team": [
+                        "Bella Collins",
+                        "Jackson Murphy",
+                        "Scarlett Rogers"
+                    ]
+                },
+                {
+                    "task_id": 2,
+                    "team": [
+                        "Levi Morris",
+                        "Natalie Cooper",
+                        "Owen Richardson"
+                    ]
+                },
+                {
+                    "task_id": 3,
+                    "team": [
+                        "Oliver Smith",
+                        "Emma Johnson",
+                        "Lucas Anderson"
+                    ]
+                }
+            ],
             "tasks": [
                 {
                     "id": 1,
@@ -53,6 +63,33 @@
             "description": "Launch a marketing campaign to promote the new product.",
             "status": "To Do",
             "dueDate": "2024-07-15",
+            "estimated_total_budget": 100000,
+            "members": [
+                {
+                    "task_id": 4,
+                    "team": [
+                        "Sophia Clark",
+                        "Ethan Roberts",
+                        "Ava Walker"
+                    ]
+                },
+                {
+                    "task_id": 5,
+                    "team": [
+                        "Liam Thompson",
+                        "Charlotte Baker",
+                        "Mia Davis"
+                    ]
+                },
+                {
+                    "task_id": 6,
+                    "team": [
+                        "Aiden White",
+                        "Harper Wilson",
+                        "Ella Martinez"
+                    ]
+                }
+            ],
             "tasks": [
                 {
                     "id": 4,
@@ -83,6 +120,33 @@
             "description": "Develop a new product to meet market demand.",
             "status": "Completed",
             "dueDate": "2024-05-31",
+            "estimated_total_budget": 200000,
+            "members": [
+                {
+                    "task_id": 7,
+                    "team": [
+                        "Luna Garcia",
+                        "Noah Martinez",
+                        "Avery Rodriguez"
+                    ]
+                },
+                {
+                    "task_id": 8,
+                    "team": [
+                        "Lily Moore",
+                        "Elijah Perez",
+                        "Zoe Hernandez"
+                    ]
+                },
+                {
+                    "task_id": 9,
+                    "team": [
+                        "Logan Sanchez",
+                        "Amelia Rivera",
+                        "Carter Cruz"
+                    ]
+                }
+            ],
             "tasks": [
                 {
                     "id": 7,
@@ -113,6 +177,33 @@
             "description": "Implement a training program to upskill employees.",
             "status": "In Progress",
             "dueDate": "2024-08-30",
+            "estimated_total_budget": 80000,
+            "members": [
+                {
+                    "task_id": 10,
+                    "team": [
+                        "Mason Taylor",
+                        "Sophie Stewart",
+                        "Ethan Lopez"
+                    ]
+                },
+                {
+                    "task_id": 11,
+                    "team": [
+                        "Harper Adams",
+                        "Mia Edwards",
+                        "Nathan Hill"
+                    ]
+                },
+                {
+                    "task_id": 12,
+                    "team": [
+                        "Emma Howard",
+                        "William Ward",
+                        "Sofia Bell"
+                    ]
+                }
+            ],
             "tasks": [
                 {
                     "id": 10,
@@ -143,6 +234,33 @@
             "description": "Develop a mobile application for iOS and Android platforms.",
             "status": "To Do",
             "dueDate": "2024-09-30",
+            "estimated_total_budget": 150000,
+            "members": [
+                {
+                    "task_id": 13,
+                    "team": [
+                        "Liam Evans",
+                        "Zoe Cooper",
+                        "Ella Flores"
+                    ]
+                },
+                {
+                    "task_id": 14,
+                    "team": [
+                        "Nora Long",
+                        "Ethan Baker",
+                        "Isabella Green"
+                    ]
+                },
+                {
+                    "task_id": 15,
+                    "team": [
+                        "Aiden Price",
+                        "Lily Morgan",
+                        "Owen Turner"
+                    ]
+                }
+            ],
             "tasks": [
                 {
                     "id": 13,
@@ -173,6 +291,33 @@
             "description": "Create high-quality content for the company blog and social media channels.",
             "status": "To Do",
             "dueDate": "2024-10-31",
+            "estimated_total_budget": 60000,
+            "members": [
+                {
+                    "task_id": 16,
+                    "team": [
+                        "Ethan Reed",
+                        "Sophie Coleman",
+                        "James Rivera"
+                    ]
+                },
+                {
+                    "task_id": 17,
+                    "team": [
+                        "Natalie Ward",
+                        "Benjamin Butler",
+                        "Ava Simmons"
+                    ]
+                },
+                {
+                    "task_id": 18,
+                    "team": [
+                        "Isaac Alexander",
+                        "Madison Powell",
+                        "Mason Jenkins"
+                    ]
+                }
+            ],
             "tasks": [
                 {
                     "id": 16,
@@ -192,7 +337,7 @@
                     "id": 18,
                     "title": "Create Social Media Content",
                     "description": "Create visually appealing and engaging content for social media platforms.",
-                    "status": "To Do",
+                    "status": "Completed",
                     "dueDate": "2024-10-01"
                 }
             ]
@@ -203,12 +348,39 @@
             "description": "Improve the company's customer support process and infrastructure.",
             "status": "To Do",
             "dueDate": "2024-11-30",
+            "estimated_total_budget": 50000,
+            "members": [
+                {
+                    "task_id": 19,
+                    "team": [
+                        "Nathan Stewart",
+                        "Eva Gonzales",
+                        "Gabriel Carter"
+                    ]
+                },
+                {
+                    "task_id": 20,
+                    "team": [
+                        "Mila Cook",
+                        "Luke Ward",
+                        "Eva Foster"
+                    ]
+                },
+                {
+                    "task_id": 21,
+                    "team": [
+                        "Ethan Murphy",
+                        "Sophia Rivera",
+                        "David Cox"
+                    ]
+                }
+            ],
             "tasks": [
                 {
                     "id": 19,
                     "title": "Assess Current Process",
                     "description": "Evaluate the current customer support process and identify pain points.",
-                    "status": "To Do",
+                    "status": "In Progress",
                     "dueDate": "2024-09-30"
                 },
                 {
@@ -222,7 +394,7 @@
                     "id": 21,
                     "title": "Train Support Team",
                     "description": "Provide training to the support team on the new processes and tools.",
-                    "status": "To Do",
+                    "status": "In Progress",
                     "dueDate": "2024-11-01"
                 }
             ]
@@ -233,6 +405,33 @@
             "description": "Optimize the company's sales strategy to increase revenue and market share.",
             "status": "To Do",
             "dueDate": "2024-12-31",
+            "estimated_total_budget": 70000,
+            "members": [
+                {
+                    "task_id": 22,
+                    "team": [
+                        "Lucy King",
+                        "John Perez",
+                        "Mia Turner"
+                    ]
+                },
+                {
+                    "task_id": 23,
+                    "team": [
+                        "Aidan Nelson",
+                        "Isabella Garcia",
+                        "Logan Hall"
+                    ]
+                },
+                {
+                    "task_id": 24,
+                    "team": [
+                        "Chloe Sanchez",
+                        "Daniel Evans",
+                        "Eva Carter"
+                    ]
+                }
+            ],
             "tasks": [
                 {
                     "id": 22,
@@ -263,6 +462,33 @@
             "description": "Restructure the finance department to enhance financial management and reporting.",
             "status": "To Do",
             "dueDate": "2025-01-31",
+            "estimated_total_budget": 40000,
+            "members": [
+                {
+                    "task_id": 25,
+                    "team": [
+                        "Eli Stewart",
+                        "Ava Parker",
+                        "Jacob Richardson"
+                    ]
+                },
+                {
+                    "task_id": 26,
+                    "team": [
+                        "Grace Cook",
+                        "Michael Ward",
+                        "Layla Martinez"
+                    ]
+                },
+                {
+                    "task_id": 27,
+                    "team": [
+                        "Mason Foster",
+                        "Ella Brooks",
+                        "Aiden Ramirez"
+                    ]
+                }
+            ],
             "tasks": [
                 {
                     "id": 25,
@@ -293,6 +519,33 @@
             "description": "Optimize the company's supply chain to reduce costs and improve efficiency.",
             "status": "To Do",
             "dueDate": "2025-02-28",
+            "estimated_total_budget": 100000,
+            "members": [
+                {
+                    "task_id": 28,
+                    "team": [
+                        "Elena Thompson",
+                        "Isaac Rodriguez",
+                        "Eva Morgan"
+                    ]
+                },
+                {
+                    "task_id": 29,
+                    "team": [
+                        "Logan Young",
+                        "Ella Collins",
+                        "Daniel Baker"
+                    ]
+                },
+                {
+                    "task_id": 30,
+                    "team": [
+                        "Sophia Mitchell",
+                        "Lucas Flores",
+                        "Nora Wood"
+                    ]
+                }
+            ],
             "tasks": [
                 {
                     "id": 28,
@@ -323,6 +576,33 @@
             "description": "Implement a wellness program to promote employee health and well-being.",
             "status": "To Do",
             "dueDate": "2025-03-31",
+            "estimated_total_budget": 30000,
+            "members": [
+                {
+                    "task_id": 31,
+                    "team": [
+                        "Olivia Gonzalez",
+                        "Elijah Walker",
+                        "Eva Rivera"
+                    ]
+                },
+                {
+                    "task_id": 32,
+                    "team": [
+                        "Julian Perez",
+                        "Madison Ward",
+                        "Eliana Cook"
+                    ]
+                },
+                {
+                    "task_id": 33,
+                    "team": [
+                        "Emma Allen",
+                        "Logan Torres",
+                        "Nora Carter"
+                    ]
+                }
+            ],
             "tasks": [
                 {
                     "id": 31,
@@ -353,6 +633,33 @@
             "description": "Upgrade the company's IT infrastructure to support growth and improve security.",
             "status": "To Do",
             "dueDate": "2025-04-30",
+            "estimated_total_budget": 200000,
+            "members": [
+                {
+                    "task_id": 34,
+                    "team": [
+                        "Avery Parker",
+                        "Elena Brooks",
+                        "Isaac Butler"
+                    ]
+                },
+                {
+                    "task_id": 35,
+                    "team": [
+                        "Sophia Foster",
+                        "Lucas Ward",
+                        "Natalie Cox"
+                    ]
+                },
+                {
+                    "task_id": 36,
+                    "team": [
+                        "Ethan Lopez",
+                        "Emma Murphy",
+                        "Mia Richardson"
+                    ]
+                }
+            ],
             "tasks": [
                 {
                     "id": 34,
@@ -374,356 +681,6 @@
                     "description": "Test new infrastructure and optimize performance and security.",
                     "status": "To Do",
                     "dueDate": "2025-04-30"
-                }
-            ]
-        }
-    ],
-    "members": [
-        {
-            "project_id": 1,
-            "project_member": [
-                {
-                    "task_id": 1,
-                    "team": [
-                        "John Doe",
-                        "Alice Johnson",
-                        "Michael Smith"
-                    ]
-                },
-                {
-                    "task_id": 2,
-                    "team": [
-                        "Jane Smith",
-                        "Bob Williams",
-                        "Emma Brown"
-                    ]
-                },
-                {
-                    "task_id": 3,
-                    "team": [
-                        "Eva Brown",
-                        "Michael Davis",
-                        "Sophia Wilson"
-                    ]
-                }
-            ]
-        },
-        {
-            "project_id": 2,
-            "project_member": [
-                {
-                    "task_id": 1,
-                    "team": [
-                        "David Lee",
-                        "Olivia Taylor",
-                        "William Martinez"
-                    ]
-                },
-                {
-                    "task_id": 2,
-                    "team": [
-                        "Sophie Jones",
-                        "James Clark",
-                        "Isabella Thomas"
-                    ]
-                },
-                {
-                    "task_id": 3,
-                    "team": [
-                        "Liam Johnson",
-                        "Emily Garcia",
-                        "Jacob Wilson"
-                    ]
-                }
-            ]
-        },
-        {
-            "project_id": 3,
-            "project_member": [
-                {
-                    "task_id": 1,
-                    "team": [
-                        "Charlotte Anderson",
-                        "Daniel Harris",
-                        "Ava Wilson"
-                    ]
-                },
-                {
-                    "task_id": 2,
-                    "team": [
-                        "Ethan White",
-                        "Mia Davis",
-                        "Alexander Rodriguez"
-                    ]
-                },
-                {
-                    "task_id": 3,
-                    "team": [
-                        "Amelia Martinez",
-                        "Matthew Thompson",
-                        "Harper Walker"
-                    ]
-                }
-            ]
-        },
-        {
-            "project_id": 4,
-            "project_member": [
-                {
-                    "task_id": 1,
-                    "team": [
-                        "Benjamin Allen",
-                        "Sophia Turner",
-                        "Logan Harris"
-                    ]
-                },
-                {
-                    "task_id": 2,
-                    "team": [
-                        "Aiden King",
-                        "Abigail Hall",
-                        "Lucas Lopez"
-                    ]
-                },
-                {
-                    "task_id": 3,
-                    "team": [
-                        "Ella Scott",
-                        "Nathan Young",
-                        "Victoria Parker"
-                    ]
-                }
-            ]
-        },
-        {
-            "project_id": 5,
-            "project_member": [
-                {
-                    "task_id": 1,
-                    "team": [
-                        "Chloe Carter",
-                        "Samuel Perez",
-                        "Zoe Mitchell"
-                    ]
-                },
-                {
-                    "task_id": 2,
-                    "team": [
-                        "Jack Morris",
-                        "Hannah Nelson",
-                        "Gabriel Cook"
-                    ]
-                },
-                {
-                    "task_id": 3,
-                    "team": [
-                        "Sofia Price",
-                        "Dylan Adams",
-                        "Madison Ward"
-                    ]
-                }
-            ]
-        },
-        {
-            "project_id": 6,
-            "project_member": [
-                {
-                    "task_id": 1,
-                    "team": [
-                        "Avery Wright",
-                        "Anthony Hall",
-                        "Grace Rivera"
-                    ]
-                },
-                {
-                    "task_id": 2,
-                    "team": [
-                        "Elijah Reed",
-                        "Lily Wood",
-                        "Henry Cox"
-                    ]
-                },
-                {
-                    "task_id": 3,
-                    "team": [
-                        "Evelyn Foster",
-                        "Andrew Bell",
-                        "Aria Flores"
-                    ]
-                }
-            ]
-        },
-        {
-            "project_id": 7,
-            "project_member": [
-                {
-                    "task_id": 1,
-                    "team": [
-                        "Bella Collins",
-                        "Jackson Murphy",
-                        "Scarlett Rogers"
-                    ]
-                },
-                {
-                    "task_id": 2,
-                    "team": [
-                        "Levi Morris",
-                        "Natalie Cooper",
-                        "Owen Richardson"
-                    ]
-                },
-                {
-                    "task_id": 3,
-                    "team": [
-                        "Luna Simmons",
-                        "Christian Bailey",
-                        "Peyton Stewart"
-                    ]
-                }
-            ]
-        },
-        {
-            "project_id": 8,
-            "project_member": [
-                {
-                    "task_id": 1,
-                    "team": [
-                        "Leah Washington",
-                        "Christopher Kelly",
-                        "Eli Hayes"
-                    ]
-                },
-                {
-                    "task_id": 2,
-                    "team": [
-                        "Mila Russell",
-                        "Carter Turner",
-                        "Samantha Evans"
-                    ]
-                },
-                {
-                    "task_id": 3,
-                    "team": [
-                        "Dominic Murphy",
-                        "Zoey Parker",
-                        "Tyler Gray"
-                    ]
-                }
-            ]
-        },
-        {
-            "project_id": 9,
-            "project_member": [
-                {
-                    "task_id": 1,
-                    "team": [
-                        "Elena Hughes",
-                        "Jordan Wood",
-                        "Brooklyn Price"
-                    ]
-                },
-                {
-                    "task_id": 2,
-                    "team": [
-                        "Aaron Diaz",
-                        "Madelyn Morgan",
-                        "Gavin Griffin"
-                    ]
-                },
-                {
-                    "task_id": 3,
-                    "team": [
-                        "Audrey Carter",
-                        "Julian Torres",
-                        "Reagan Cook"
-                    ]
-                }
-            ]
-        },
-        {
-            "project_id": 10,
-            "project_member": [
-                {
-                    "task_id": 1,
-                    "team": [
-                        "Katherine Butler",
-                        "Colton Brooks",
-                        "Alexa Mitchell"
-                    ]
-                },
-                {
-                    "task_id": 2,
-                    "team": [
-                        "Grayson Hughes",
-                        "Vanessa Foster",
-                        "Parker Bennett"
-                    ]
-                },
-                {
-                    "task_id": 3,
-                    "team": [
-                        "Trinity Rivera",
-                        "Adrian Hill",
-                        "Maya Jenkins"
-                    ]
-                }
-            ]
-        },
-        {
-            "project_id": 11,
-            "project_member": [
-                {
-                    "task_id": 1,
-                    "team": [
-                        "Aiden Montgomery",
-                        "Gabriella Ramirez",
-                        "Carlos Bryant"
-                    ]
-                },
-                {
-                    "task_id": 2,
-                    "team": [
-                        "Ella Cole",
-                        "Oscar Coleman",
-                        "Amaya Ellis"
-                    ]
-                },
-                {
-                    "task_id": 3,
-                    "team": [
-                        "Hudson Mitchell",
-                        "Claire Harrison",
-                        "Jaden Murray"
-                    ]
-                }
-            ]
-        },
-        {
-            "project_id": 12,
-            "project_member": [
-                {
-                    "task_id": 1,
-                    "team": [
-                        "Brody Torres",
-                        "Lyla Bennett",
-                        "Miles Peterson"
-                    ]
-                },
-                {
-                    "task_id": 2,
-                    "team": [
-                        "Kylie Brooks",
-                        "Jaxson Washington",
-                        "Faith Henderson"
-                    ]
-                },
-                {
-                    "task_id": 3,
-                    "team": [
-                        "Riley Carter",
-                        "Lincoln Coleman",
-                        "Ariana Rodriguez"
-                    ]
                 }
             ]
         }

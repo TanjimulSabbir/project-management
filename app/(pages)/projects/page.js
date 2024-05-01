@@ -3,7 +3,7 @@ import Projects from "./projects"
 
 export default function page() {
     return (
-        <div>
+        <div className="container mx-auto">
             <Projects />
         </div>
     )
