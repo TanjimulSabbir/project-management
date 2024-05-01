@@ -65,7 +65,7 @@ export default function Projects() {
                             <ProjectTitle name="status" />
                         </div>
                         <Options handleModal={handleModal} data={project} router={router} type="project" />
-                        <Modal openModal={openModal} handleModal={handleModal} data={project} />
+                        <Modal openModal={openModal} handleModal={handleModal} data={project} type="project" />
                     </div>
                 )
             }) : "No Data Found!"}

@@ -45,14 +45,14 @@
                     "id": 2,
                     "title": "Design Mockups",
                     "description": "Create mockups for the new website design based on gathered requirements.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2024-05-15"
                 },
                 {
                     "id": 3,
                     "title": "Develop Frontend",
                     "description": "Develop the frontend of the website using React and Tailwind CSS.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2024-06-10"
                 }
             ]
@@ -61,7 +61,7 @@
             "id": 2,
             "name": "Marketing Campaign",
             "description": "Launch a marketing campaign to promote the new product.",
-            "status": "To Do",
+            "status": "Pending",
             "dueDate": "2024-07-15",
             "estimated_total_budget": 100000,
             "members": [
@@ -102,14 +102,14 @@
                     "id": 5,
                     "title": "Design Marketing Materials",
                     "description": "Design promotional materials such as banners, flyers, and social media posts.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2024-06-01"
                 },
                 {
                     "id": 6,
                     "title": "Launch Campaign",
                     "description": "Execute the marketing campaign across various channels.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2024-06-15"
                 }
             ]
@@ -216,14 +216,14 @@
                     "id": 11,
                     "title": "Develop Training Modules",
                     "description": "Create training modules for different skill sets and departments.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2024-07-15"
                 },
                 {
                     "id": 12,
                     "title": "Launch Training Program",
                     "description": "Roll out the training program and provide ongoing support and feedback.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2024-08-01"
                 }
             ]
@@ -232,7 +232,7 @@
             "id": 5,
             "name": "Mobile App Development",
             "description": "Develop a mobile application for iOS and Android platforms.",
-            "status": "To Do",
+            "status": "Pending",
             "dueDate": "2024-09-30",
             "estimated_total_budget": 150000,
             "members": [
@@ -266,21 +266,21 @@
                     "id": 13,
                     "title": "Define App Features",
                     "description": "Define the features and functionality of the mobile app.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2024-07-15"
                 },
                 {
                     "id": 14,
                     "title": "Design UI/UX",
                     "description": "Design the user interface and user experience for the mobile app.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2024-08-01"
                 },
                 {
                     "id": 15,
                     "title": "Develop Backend",
                     "description": "Develop the backend infrastructure and APIs for the mobile app.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2024-08-15"
                 }
             ]
@@ -289,7 +289,7 @@
             "id": 6,
             "name": "Content Creation",
             "description": "Create high-quality content for the company blog and social media channels.",
-            "status": "To Do",
+            "status": "Pending",
             "dueDate": "2024-10-31",
             "estimated_total_budget": 60000,
             "members": [
@@ -323,14 +323,14 @@
                     "id": 16,
                     "title": "Content Strategy",
                     "description": "Develop a content strategy outlining topics, formats, and distribution channels.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2024-08-31"
                 },
                 {
                     "id": 17,
                     "title": "Write Blog Posts",
                     "description": "Write informative and engaging blog posts on relevant industry topics.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2024-09-15"
                 },
                 {
@@ -346,7 +346,7 @@
             "id": 7,
             "name": "Customer Support Improvement",
             "description": "Improve the company's customer support process and infrastructure.",
-            "status": "To Do",
+            "status": "Pending",
             "dueDate": "2024-11-30",
             "estimated_total_budget": 50000,
             "members": [
@@ -387,7 +387,7 @@
                     "id": 20,
                     "title": "Implement Help Desk Software",
                     "description": "Select and implement a help desk software to streamline customer support.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2024-10-15"
                 },
                 {
@@ -403,7 +403,7 @@
             "id": 8,
             "name": "Sales Strategy Optimization",
             "description": "Optimize the company's sales strategy to increase revenue and market share.",
-            "status": "To Do",
+            "status": "Pending",
             "dueDate": "2024-12-31",
             "estimated_total_budget": 70000,
             "members": [
@@ -437,21 +437,21 @@
                     "id": 22,
                     "title": "Sales Analysis",
                     "description": "Analyze sales data and trends to identify areas for improvement.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2024-10-31"
                 },
                 {
                     "id": 23,
                     "title": "Revise Sales Process",
                     "description": "Revise the sales process to streamline operations and improve efficiency.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2024-11-15"
                 },
                 {
                     "id": 24,
                     "title": "Implement CRM System",
                     "description": "Select and implement a CRM system to manage customer relationships and sales pipelines.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2024-12-01"
                 }
             ]
@@ -460,7 +460,7 @@
             "id": 9,
             "name": "Finance Department Restructuring",
             "description": "Restructure the finance department to enhance financial management and reporting.",
-            "status": "To Do",
+            "status": "Pending",
             "dueDate": "2025-01-31",
             "estimated_total_budget": 40000,
             "members": [
@@ -494,21 +494,21 @@
                     "id": 25,
                     "title": "Assess Current Structure",
                     "description": "Assess the current structure and processes of the finance department.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2024-11-30"
                 },
                 {
                     "id": 26,
                     "title": "Develop New Organizational Structure",
                     "description": "Develop a new organizational structure that aligns with the company's goals and objectives.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2024-12-15"
                 },
                 {
                     "id": 27,
                     "title": "Implement Changes",
                     "description": "Implement the new organizational structure and processes.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2025-01-15"
                 }
             ]
@@ -517,7 +517,7 @@
             "id": 10,
             "name": "Supply Chain Optimization",
             "description": "Optimize the company's supply chain to reduce costs and improve efficiency.",
-            "status": "To Do",
+            "status": "Pending",
             "dueDate": "2025-02-28",
             "estimated_total_budget": 100000,
             "members": [
@@ -551,21 +551,21 @@
                     "id": 28,
                     "title": "Supply Chain Analysis",
                     "description": "Conduct a thorough analysis of the company's supply chain operations.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2025-01-31"
                 },
                 {
                     "id": 29,
                     "title": "Identify Areas for Improvement",
                     "description": "Identify areas within the supply chain that can be optimized for cost reduction and efficiency.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2025-02-15"
                 },
                 {
                     "id": 30,
                     "title": "Implement Changes",
                     "description": "Implement changes to the supply chain processes and logistics.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2025-02-28"
                 }
             ]
@@ -574,7 +574,7 @@
             "id": 11,
             "name": "Employee Wellness Program",
             "description": "Implement a wellness program to promote employee health and well-being.",
-            "status": "To Do",
+            "status": "Pending",
             "dueDate": "2025-03-31",
             "estimated_total_budget": 30000,
             "members": [
@@ -608,21 +608,21 @@
                     "id": 31,
                     "title": "Survey Employees",
                     "description": "Survey employees to understand their wellness needs and preferences.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2025-02-28"
                 },
                 {
                     "id": 32,
                     "title": "Develop Program",
                     "description": "Develop a wellness program that includes activities, resources, and support.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2025-03-15"
                 },
                 {
                     "id": 33,
                     "title": "Launch Program",
                     "description": "Launch the wellness program and promote participation among employees.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2025-03-31"
                 }
             ]
@@ -631,7 +631,7 @@
             "id": 12,
             "name": "IT Infrastructure Upgrade",
             "description": "Upgrade the company's IT infrastructure to support growth and improve security.",
-            "status": "To Do",
+            "status": "Pending",
             "dueDate": "2025-04-30",
             "estimated_total_budget": 200000,
             "members": [
@@ -665,21 +665,21 @@
                     "id": 34,
                     "title": "Assessment and Planning",
                     "description": "Assess current IT infrastructure and plan upgrades and improvements.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2025-03-15"
                 },
                 {
                     "id": 35,
                     "title": "Implement Upgrades",
                     "description": "Implement upgrades to hardware, software, and network infrastructure.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2025-04-15"
                 },
                 {
                     "id": 36,
                     "title": "Testing and Optimization",
                     "description": "Test new infrastructure and optimize performance and security.",
-                    "status": "To Do",
+                    "status": "Pending",
                     "dueDate": "2025-04-30"
                 }
             ]

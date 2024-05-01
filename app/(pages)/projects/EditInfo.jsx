@@ -39,7 +39,7 @@ const EditProjectHeader = () => (
     <div className="pb-3 text-center font-semibold text-xl">Edit Project</div>
 );
 
-export default function EditInfo({ data, handleModal, type = "task" }) {
+export default function EditInfo({ data, handleModal, type }) {
     const [status, setStatus] = useState(data.status);
     const [teamMember, setTeamMember] = useState("");
 
@@ -63,7 +63,7 @@ export default function EditInfo({ data, handleModal, type = "task" }) {
                     <InputField label="Description" type="textarea" defaultValue={data.description} placeholder="Enter project description" />
 
                     {"task" === "task" && (
-                        <InputField label="Add Member" type="text" defaultValue={teamMember||""} placeholder="Enter team member name" />
+                        <InputField label="Add Member" type="text" defaultValue={teamMember || ""} placeholder="Enter team member name" />
                     )}
                     {type === "project" && (
                         <InputField label="Budgets" type="number" defaultValue={data?.estimated_total_budget} placeholder="Enter estimated total budget" />

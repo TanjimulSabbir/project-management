@@ -25,7 +25,7 @@ export default function Tasks() {
 
     useEffect(() => {
         setShowData(tasks.slice((currentPage - 1) * pageItems, pageItems * currentPage));
-    }, [currentPage,tasks]);
+    }, [currentPage, tasks]);
 
     return (
         <div className="space-y-3 py-10">
@@ -54,12 +54,10 @@ export default function Tasks() {
                             </div>
                         </div>
                         <Options handleModal={handleModal} data={task} type="task" />
-                        <Modal openModal={openModal} handleModal={handleModal} data={task} />
+                        <Modal openModal={openModal} handleModal={handleModal} data={task} type="task" />
                     </div>
                 )
             })}
-
-            {/* <button onClick={() => handleModal()}>Open</button> */}
 
             <ShowPage
                 length={tasks.length}

@@ -8,14 +8,27 @@ const useProjectsStore = create((set) => ({
     tasks: [...allTasks],
     currentPage: { projectCurrentPage: 1, tasksCurrentPage: 1 },
     individualPost: { project: {}, task: {} },
-
     // Delete
     removeId: { project: "", task: "" },
 
-    setProjects: (data) => set({ projects: data }),
-    setTasks: (data) => set({ projects: data }),
+    // set data first method (push method is fast as why I'm using it)
+    setProjects: (data) => set(state => (state.projects.push(data))),
+    setTasks: (data) => set(state.tasks.push(data)),
+    // set data second method
+    // setProjects: (data) => set(state => ({ projects: [...state.projects, data] })),
+    // setTasks: (data) => set(state => ({ tasks: [...state.tasks, data] })),
+
+    // Edit data
+    editProject: ({ id, newData }) => set(state => ({
+        projects: state.projects.map(project => project.id === id ? { ...project, ...newData } : project)
+    })),
+
+    editTask: ({ id, newData }) => set(state => ({
+        tasks: state.tasks.map(task => task.id === id ? { ...task, ...newData } : task)
+    })),
+
+    // pagination
     setCurrentPage: ({ data, type }) => { set((state) => ({ currentPage: { ...state.currentPage, [type]: data } })) },
-    setTasks: (data) => set({ tasks: data }),
     setIndividualPost: ({ data, type }) => { set(state => ({ ...state.individualPost, [type]: data })) },
 
     // delete
