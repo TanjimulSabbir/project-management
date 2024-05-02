@@ -29,7 +29,6 @@ const useProjectsStore = create((set) => ({
             task.id === id ? { ...task, ...updatedData } : task
         )
     })),
-
     // Adding Member
     addMember: ({ projectId, member }) => set(state => ({
         projects: state.projects.map(project =>
