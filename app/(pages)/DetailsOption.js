@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import ConfirmationModal from "@/app/utils/Confirmation";
 import useProjectsStore from '@/app/store';
 
@@ -17,7 +16,6 @@ const OptionButton = ({ label, onClick }) => (
 
 export default function DetailsOptions({ handleModal, data, type }) {
     const { setIndividualPost, removeData, setRemoveId } = useProjectsStore();
-    const router = useRouter();
 
     useEffect(() => {
         setIndividualPost({ data, type })

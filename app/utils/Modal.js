@@ -1,4 +1,4 @@
-import "../(pages)/projects.css"
+import "../style/animation.css"
 import EditInfo from '../(pages)/EditInfo';
 
 export default function Modal({ handleModal, openModal, type }) {

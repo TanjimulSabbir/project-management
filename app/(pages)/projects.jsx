@@ -31,6 +31,7 @@ export default function Projects() {
 
     return (
         <div className="space-y-3 py-10">
+            <h1 className="text-2xl text-green-600 text-center mb-7">Projects Overview</h1>
             {showData.length > 0 ? showData.map(project => {
                 const { id, name, description, status, dueDate, tasks, estimated_total_budget } = project;
                 return (
@@ -66,7 +67,7 @@ export default function Projects() {
                         <Modal openModal={openModal} handleModal={handleModal} type="project" />
                     </div>
                 )
-            }) : "No Data Found!"};
+            }) : "No Data Found!"}
 
 
             <ShowPage

@@ -29,12 +29,13 @@ export default function Tasks() {
 
     return (
         <div className="space-y-3 py-10">
+            <h1 className="text-2xl text-green-600 text-center mb-7">Tasks Overview</h1>
             {showData.length > 0 ? showData.map(task => {
                 const { id, name, description, status, dueDate, } = task;
                 return (
                     <div key={id} className="flex items-center p-4 border border-gray-200 rounded-md">
                         <div className="flex-1 min-w-[30%]">
-                            <p>{id}. {name}</p>
+                            <p>{id}.{name}</p>
                             <ProjectTitle name="Development" />
                         </div>
                         <div className="flex-1">
