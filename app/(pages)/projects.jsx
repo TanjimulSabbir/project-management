@@ -14,7 +14,6 @@ export default function Projects() {
     const [openModal, setOpenModal] = useState(false);
     const [showData, setShowData] = useState([])
 
-
     const router = useRouter();
     const handleModal = () => {
         setOpenModal(!openModal);
