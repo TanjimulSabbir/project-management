@@ -19,13 +19,11 @@ const AddMemberForm = ({ projectId, setOpenAddMember }) => {
             setOpenAddMember(false)
         }
     };
-
     const handleCloseModal = () => {
         setOpenAddMember(false)
     }
-    const prev = [...projects.find(item => item.members).members[0].team]
     const teamsLength = projects.find(project => project.id === projectId).members
-    console.log(prev)
+
     return (
         <div className="max-w-md mx-auto mt-8 p-6 bg-white shadow-md rounded-md text-black">
             <h2 className="text-xl font-semibold mb-4">Add Member</h2>
@@ -72,13 +70,6 @@ const AddMemberForm = ({ projectId, setOpenAddMember }) => {
                     Cancel
                 </button>
             </div>
-            {/* <div className="mt-4">
-                {teamMembers.map((member, index) => (
-                    <div key={index} className="bg-gray-100 px-3 py-1 mb-2 rounded-md">
-                        {member}
-                    </div>
-                ))}
-            </div> */}
         </div>
     );
 };

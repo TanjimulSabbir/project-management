@@ -15,7 +15,7 @@ export default function TaskDetails({ task }) {
     const handleModal = () => {
         setOpenModal(!openModal);
     }
-    const teamMember = projects.find(project => project.members.some(item => item.task_id === id)).members[id - 1].team
+    const teamMember = projects.find(project => project.members.some(item => item.task_id === id)).members.find(item => item.task_id === id)
 
     console.log(teamMember, "from TaskDetails")
 
@@ -39,7 +39,7 @@ export default function TaskDetails({ task }) {
                 <div className='py-5'>
                     <h1>Team members for this task</h1>
                     <div className='flex items-center flex-wrap gap-3 mt-3'>
-                        {teamMember?.length > 0 ? teamMember.map((memberName, index) => (
+                        {teamMember?.team.length > 0 ? teamMember.team.map((memberName, index) => (
                             <p key={index} className="text-sm font-semibold bg-green-600 p-2 rounded-md">{memberName}</p>
                         )) : <span className='text-xs text-red-600'>No team member(s) found!</span>}
                     </div>
