@@ -8,6 +8,6 @@ export default function Page({ params }) {
     if (params.id) {
         content = tasks.filter(task => task.id == params.id).map(task => <TaskDetails key={task.id} task={task} />)
     }
-    console.log(content)
+
     return content;
 }

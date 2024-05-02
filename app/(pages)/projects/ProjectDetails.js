@@ -7,20 +7,14 @@ import AddMemberModal from '@/app/utils/addMemberModal';
 import { IoMdAdd } from 'react-icons/io';
 import TaskDetails from '../tasks/[id]/TaskDetails';
 import ComponentDescription from './HeadingDescription';
-import useProjectsStore from '@/app/store';
-
+import toast from 'react-hot-toast';
 
 export default function ProjectDetails({ project }) {
     const [openModal, setOpenModal] = useState(false);
     const [openAddMember, setOpenAddMember] = useState(false);
-
+   
     const { id, name, description, status, dueDate, members, tasks } = project;
-
     const addMemberBtnStye = "rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-green-600 ml-3 cursor-pointer flex items-center space-x-2"
-
-    if (!project.id) {
-        return <div className="text-center text-gray-600 mt-5">Data not found</div>;
-    }
 
     const handleModal = () => {
         setOpenModal(!openModal);
@@ -28,6 +22,10 @@ export default function ProjectDetails({ project }) {
 
     const handleAddMember = () => {
         setOpenAddMember(!openAddMember)
+    }
+
+    const handleAddTask = () => {
+        toast.error("Project Time over. That's why I can't adding this feature right now.")
     }
 
     return (
@@ -61,9 +59,9 @@ export default function ProjectDetails({ project }) {
                     <div className="flex items-center mt-5">
                         <DetailsOptions handleModal={handleModal} data={project} type="project" />
                         <p className={addMemberBtnStye} onClick={handleAddMember}>
-                            <IoMdAdd />   <span>Add Member</span>
+                            <IoMdAdd />  <span>Add Member</span>
                         </p>
-                        <p className={addMemberBtnStye} onClick={handleAddMember}>
+                        <p className={addMemberBtnStye} onClick={handleAddTask}>
                             <IoMdAdd />   <span>Add Task</span>
                         </p>
                     </div>

@@ -5,7 +5,6 @@ const ShowPage = ({ length, pageItems, currentPage, setCurrentPage, type }) => {
 
     const handlePageChange = (pageNumber) => {
         setCurrentPage({ data: pageNumber, type });
-        console.log({ data: pageNumber, type })
     };
 
     return (

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import ConfirmationModal from "@/app/utils/Confirmation";
 import useProjectsStore from '@/app/store';
+import { usePathname } from 'next/navigation';
 
 // Reusable button component
 const OptionButton = ({ label, onClick }) => (
@@ -16,6 +17,7 @@ const OptionButton = ({ label, onClick }) => (
 
 export default function DetailsOptions({ handleModal, data, type }) {
     const { setIndividualPost, removeData, setRemoveId } = useProjectsStore();
+    const path = usePathname().split("/")[1]
 
     useEffect(() => {
         setIndividualPost({ data, type })

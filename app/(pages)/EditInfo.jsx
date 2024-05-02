@@ -89,7 +89,7 @@ export default function EditInfo({ handleModal, type }) {
     };
 
     return (
-        <div className='p-5 md:p-10 bg-gray-200 rounded-xl shadow-lg md:w-1/2 mx-auto text-black'>
+        <div className='p-5 md:p-10 bg-white rounded-xl shadow-lg md:w-1/2 mx-auto text-black'>
             <EditProjectHeader type={type} />
             <form onSubmit={handleSubmit} className="space-y-7 mb-5">
                 <InputField label="Name" name="name" type="text" defaultValue={formData.name} placeholder="Enter project name" onChange={handleChange} />

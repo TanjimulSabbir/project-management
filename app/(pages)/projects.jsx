@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import { useEffect, useState } from "react";
 import moment from "moment";
 import Options from "./Options";
@@ -7,29 +7,90 @@ import ProjectTitle from "../utils/ProjectTitle";
 import useProjectsStore from "../store";
 import Modal from "../utils/Modal";
 import ShowPage from "../utils/Pagination";
-
+import { debounce } from "../utils/Debounce";
 
 export default function Projects() {
-    let { projects, setProjects, setCurrentPage, currentPage, removeId } = useProjectsStore();
+    let { projects, setCurrentPage, currentPage } = useProjectsStore();
     const [openModal, setOpenModal] = useState(false);
-    const [showData, setShowData] = useState([])
+    const [showData, setShowData] = useState([]);
+    const [searchedText, setSearchedText] = useState("");
+    const [statusFilter, setStatusFilter] = useState("");
+    const [dueDateFilter, setDueDateFilter] = useState("");
 
     const handleModal = () => {
         setOpenModal(!openModal);
     }
 
-    currentPage = currentPage.projectCurrentPage
+    currentPage = currentPage.projectCurrentPage;
     let pageItems = 3;
-
-    console.log(projects, "from projects")
 
     useEffect(() => {
         setShowData(projects.slice((currentPage - 1) * pageItems, pageItems * currentPage));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentPage, projects]);
 
+
+    const handleChange = (e) => {
+        const value = e.target.value;
+        debouncing(value)
+    }
+
+    const handleSearch = (data) => {
+        setSearchedText(data)
+    }
+
+    const debouncing = debounce(handleSearch, 300);
+
+    useEffect(() => {
+        let filteredProjects = projects;
+
+        if (searchedText) {
+            filteredProjects = filteredProjects.filter(project =>
+                project.name.toLowerCase().includes(searchedText.toLowerCase())
+            );
+        }
+
+        if (statusFilter) {
+            filteredProjects = filteredProjects.filter(project =>
+                project.status.toLowerCase() === statusFilter.toLowerCase()
+            );
+        }
+
+        if (dueDateFilter) {
+            filteredProjects = filteredProjects.filter(project =>
+                moment(project.dueDate).format('YYYY-MM-DD') === dueDateFilter
+            );
+        }
+
+        setShowData(filteredProjects.slice((currentPage - 1) * pageItems, pageItems * currentPage));
+    }, [searchedText, statusFilter, dueDateFilter, currentPage, projects]);
+
     return (
         <div className="space-y-3 py-10">
+            <input
+                type="text"
+                value={searchedText}
+                onChange={handleChange}
+                className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                placeholder="Search by project name..."
+            />
+            <select
+                value={statusFilter}
+                onChange={(e) => setStatusFilter(e.target.value)}
+                className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 mx-4"
+            >
+                <option value="">All Status</option>
+                <option value="completed">Completed</option>
+                <option value="in progress">In Progress</option>
+                <option value="pending">Pending</option>
+            </select>
+            <input
+                type="date"
+                value={dueDateFilter}
+                onChange={(e) => setDueDateFilter(e.target.value)}
+                className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                placeholder="Due Date"
+            />
             <h1 className="text-xl md:text-2xl text-green-600 text-center mb-7">Projects Overview</h1>
             {showData.length > 0 ? showData.map(project => {
                 const { id, name, description, status, dueDate, tasks, estimated_total_budget } = project;

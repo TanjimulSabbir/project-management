@@ -35,7 +35,6 @@ const useProjectsStore = create((set) => ({
         if (project) {
             data.forEach(item => {
                 project.members[taskId].team.push(item);
-                console.log(item,"from store")
             });
         }
         return { projects: [...state.projects] };
