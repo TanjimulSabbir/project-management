@@ -1,16 +1,20 @@
 import "./globals.css";
-import { AntdRegistry } from "@ant-design/nextjs-registry";
-import { Inter, Roboto_Mono } from 'next/font/google'
+import { Roboto_Mono, IBM_Plex_Sans } from 'next/font/google'
 
-export const inter = Inter({
+
+
+const roboto_mono_init = Roboto_Mono({
   subsets: ['latin'],
-  display: 'swap',
+  weight: ["400", "500", "700"],
+  variable: "roboto_mono"
+})
+const IBM_Plex_Sans_init = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "IBM_Plex_Sans"
 })
 
-export const roboto_mono = Roboto_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-})
+
 
 export const metadata = {
   title: "Project Management",
@@ -20,7 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto_mono.className}>
+      <body className={`${roboto_mono_init.variable} ${IBM_Plex_Sans_init.variable}`}>
         {children}
       </body>
     </html>

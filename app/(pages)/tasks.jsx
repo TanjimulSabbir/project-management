@@ -35,18 +35,18 @@ export default function Tasks() {
                 return (
                     <div key={id} className="flex flex-col md:flex-row md:items-center p-4 border border-gray-200 rounded-md space-y-3 md:space-y-0">
                         <div className="flex-1 min-w-[30%]">
-                            <p>{id}.{name}</p>
+                            <p className="font-bold">{id}.{name}</p>
                             <ProjectTitle name={"Task"} />
                         </div>
                         <div className="flex-1 min-w-[10%] md:mx-auto md:text-center">
                             <p>
-                                <span className={`text-sm font-semibold ${status === 'Completed' ? 'text-green-600' : 'text-red-600'}`}>{status}</span>
+                                <span className={`text-sm font-semibold ${status.toLowerCase() === 'completed' ? 'text-green-600' : 'text-red-600'}`}>{status}</span>
                             </p>
                             <ProjectTitle name="Status" />
                         </div>
                         <div className="flex-1">
                             <div>
-                                <p>{moment(dueDate).format('DD MMMM YYYY')}</p>
+                                <p className="font-semibold">{moment(dueDate).format('DD MMMM YYYY')}</p>
                                 <ProjectTitle name="Due Date" />
                             </div>
                         </div>

@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.roboto_mono {
+    font-family: var(--roboto_mono);
+}
+.IBM_plex_sans{
+    font-family: var(--IBM_Plex_Sans);
+}
+
+body {
+    font-family: var(--IBM_Plex_Sans);
+}

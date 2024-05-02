@@ -30,14 +30,17 @@ const useProjectsStore = create((set) => ({
         )
     })),
     // Adding Member
-    addMember: ({ projectId, member }) => set(state => ({
-        projects: state.projects.map(project =>
-            project.id === projectId ? {
-                ...project,
-                members: [...project.members, member]
-            } : project
-        )
-    })),
+    addMember: ({ projectId, taskId, data }) => set(state => {
+        const project = state.projects.find(project => project.id == projectId);
+        if (project) {
+            data.forEach(item => {
+                project.members[taskId].team.push(item);
+                console.log(item,"from store")
+            });
+        }
+        return { projects: [...state.projects] };
+    }),
+
 
     // pagination
     setCurrentPage: ({ data, type }) => { set((state) => ({ currentPage: { ...state.currentPage, [type]: data } })) },

@@ -1,5 +1,5 @@
 const ProjectTitle = ({ name }) => (
-    <p className="text-xs opacity-60 text-gray-600">{name}</p>
+    <p className="text-sm text-gray-600 mt-1">{name}</p>
 );
 
 export default ProjectTitle;
