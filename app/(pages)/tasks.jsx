@@ -1,6 +1,5 @@
 "use client"
 import { useEffect, useState } from "react";
-import ProjectsData from "../../accessories/projects.json"
 import useProjectsStore from "@/app/store";
 import moment from "moment";
 import Options from "./Options";
@@ -22,10 +21,11 @@ export default function Tasks() {
     currentPage = currentPage.tasksCurrentPage;
     let pageItems = 3;
 
+    console.log(showData, "showData")
 
     useEffect(() => {
         setShowData(tasks.slice((currentPage - 1) * pageItems, pageItems * currentPage));
-    }, [currentPage, tasks]);
+    }, [currentPage, tasks, setTasks]);
 
     return (
         <div className="space-y-3 py-10">
@@ -54,12 +54,12 @@ export default function Tasks() {
                             </div>
                         </div>
                         <Options handleModal={handleModal} data={task} type="task" />
-                        <Modal openModal={openModal} handleModal={handleModal} type="task" />;
+                        <Modal openModal={openModal} handleModal={handleModal} type="task" />
                     </div>
                 )
             }) : "No data found!"}
 
-           
+
 
             <ShowPage
                 length={tasks.length}

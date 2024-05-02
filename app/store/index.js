@@ -1,4 +1,4 @@
-import create from 'zustand';
+import {create} from 'zustand';
 import initialData from "../accessories/projects.json"
 
 export const allTasks = initialData.projects.flatMap(project => project.tasks);
@@ -20,12 +20,16 @@ const useProjectsStore = create((set) => ({
 
     // Edit data
     editProject: ({ id, updatedData }) => set(state => ({
-        projects: state.projects.map(project => project.id === id ? { ...project, ...updatedData } : project)
+        projects: state.projects.map(project =>
+            project.id === id ? { ...project, ...updatedData } : project
+        )
+    })),
+    editTask: ({ id, updatedData }) => set(state => ({
+        tasks: state.tasks.map(task =>
+            task.id === id ? { ...task, ...updatedData } : task
+        )
     })),
 
-    editTask: ({ id, updatedData }) => set(state => ({
-        tasks: state.tasks.map(task => task.id === id ? { ...task, ...updatedData } : task)
-    })),
 
     // pagination
     setCurrentPage: ({ data, type }) => { set((state) => ({ currentPage: { ...state.currentPage, [type]: data } })) },

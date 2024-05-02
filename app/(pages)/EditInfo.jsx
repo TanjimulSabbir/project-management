@@ -4,23 +4,29 @@ import toast from "react-hot-toast";
 import moment from "moment";
 import ProjectTitle from "@/app/utils/projectTitle";
 import useProjectsStore from '@/app/store';
+import Loading from '@/app/loading';
+import Message from '@/app/result';
 
 // Reusable input component
-const InputField = ({ label, type = "task", defaultValue, placeholder }) => (
+const InputField = ({ label, name, type = "task", defaultValue, placeholder, onChange }) => (
     <div className="flex flex-col w-full text-black">
         <label className="text-sm font-semibold">{label}</label>
         {type === "task" ? (
             <textarea
+                name={name}
                 defaultValue={defaultValue}
                 placeholder={placeholder}
                 className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600 mt-2"
+                onChange={onChange}
             />
         ) : (
             <input
+                name={name}
                 type={type}
                 defaultValue={defaultValue}
                 placeholder={placeholder}
                 className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600 mt-2"
+                onChange={onChange}
             />
         )}
     </div>
@@ -43,7 +49,7 @@ const EditProjectHeader = ({ type }) => (
 export default function EditInfo({ handleModal, type }) {
     const { editTask, editProject, individualPost } = useProjectsStore();
 
-    const data = individualPost[type]
+    const data = individualPost[type];
 
     const [formData, setFormData] = useState({
         name: data.name,
@@ -60,22 +66,26 @@ export default function EditInfo({ handleModal, type }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const updatedData = {
-            ...formData,
-            dueDate: moment(formData.dueDate, 'YYYY-MM-DD').toDate(),
-        };
-
-        
-        console.log({ updatedData }, "from Updated Page");
 
         if (type === "task") {
-            editTask({ id: data.id, updatedData });
+            const updatedTaskData = {
+                name: e.target.elements.name.value,
+                description: e.target.elements.description.value,
+                status: e.target.elements.status.value,
+                dueDate: e.target.elements.dueDate.value
+            };
+            editTask({ id: data.id, updatedData: updatedTaskData });
         } else if (type === "project") {
-            editProject({ id: data.id, updatedData });
+            const updatedProjectData = {
+                name: e.target.elements.name.value,
+                description: e.target.elements.description.value,
+                status: e.target.elements.status.value,
+                dueDate: e.target.elements.dueDate.value,
+                estimated_total_budget: e.target.elements.estimated_total_budget.value
+            };
+            editProject({ id: data.id, updatedData: updatedProjectData });
         }
-        toast.success("Project information updated!");
-
-        console.log({ updatedData }, "from EditInfo Page")
+        setTimeout(() => { handleModal() }, 300)
     };
 
     const handleCancel = () => {
@@ -110,10 +120,11 @@ export default function EditInfo({ handleModal, type }) {
                     </select>
                 </div>
                 <div className="flex items-center justify-center space-x-4">
-                    <Button label="Save" type="submit"/>
+                    <Button label="Save" type="submit" />
                     <Button label="Cancel" onClick={handleCancel} />
                 </div>
             </form>
+
         </div>
     );
 }

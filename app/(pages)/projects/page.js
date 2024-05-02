@@ -1,12 +1,12 @@
-"use client"
-import Projects from "./projects"
-import Tasks from "./tasks"
+import React from 'react'
+import Projects from '../projects'
+import Tasks from '../tasks'
 
 export default function page() {
     return (
-        <div className="container mx-auto">
+        <div>
             <Projects />
-            <Tasks/>
+            <Tasks />
         </div>
     )
 }

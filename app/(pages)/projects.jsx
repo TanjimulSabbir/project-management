@@ -1,6 +1,5 @@
 "use client"
 import { useEffect, useState } from "react";
-import ProjectsData from "../../accessories/projects.json"
 import useProjectsStore from "@/app/store";
 import moment from "moment";
 import Options from "./Options";

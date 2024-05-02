@@ -36,3 +36,7 @@ select:focus {
 select:hover+.arrow-icon {
     fill: #718096;
 }
+
+
+/* Details page */
+

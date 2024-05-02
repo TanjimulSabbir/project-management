@@ -48,7 +48,7 @@ export default function Options({ handleModal, data, type }) {
 
     const handleViewDetails = (data) => {
         setIndividualPost({ data, type })
-        router.push(`/projects/${data.id}`)
+        router.push(`/${type}s/${data.id}`)
     };
 
     const handleDelete = (id) => {
