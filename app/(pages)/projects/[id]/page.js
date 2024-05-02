@@ -8,6 +8,5 @@ export default function Page({ params }) {
     if (params.id) {
         content = projects.filter(project => project.id == params.id).map(project => <ProjectDetails key={project.id} project={project} />)
     }
-    console.log(content)
     return content;
 }

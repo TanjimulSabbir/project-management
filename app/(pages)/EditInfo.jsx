@@ -89,15 +89,15 @@ export default function EditInfo({ handleModal, type }) {
     };
 
     return (
-        <div className='p-10 bg-white rounded-xl shadow-2xl w-1/2 mx-auto mt-10 text-black'>
+        <div className='p-5 md:p-10 bg-gray-200 rounded-xl shadow-lg md:w-1/2 mx-auto text-black'>
             <EditProjectHeader type={type} />
             <form onSubmit={handleSubmit} className="space-y-7 mb-5">
                 <InputField label="Name" name="name" type="text" defaultValue={formData.name} placeholder="Enter project name" onChange={handleChange} />
                 <InputField label="Description" name="description" type="textarea" defaultValue={formData.description} placeholder="Enter project description" onChange={handleChange} />
 
-                {type === "task" && (
+                {/* {type === "project" && (
                     <InputField label="Add Member" name="teamMember" type="text" defaultValue={formData.teamMember || ""} placeholder="Enter team member name" onChange={handleChange} />
-                )}
+                )} */}
                 {type === "project" && (
                     <InputField label="Budgets" name="estimated_total_budget" type="number" defaultValue={formData.estimated_total_budget} placeholder="Enter estimated total budget" onChange={handleChange} />
                 )}
